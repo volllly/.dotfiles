@@ -1,0 +1,5 @@
+links:
+  php.ini: ~\scoop\persist\php\cli\conf.d\php.ini
+installs: 
+  cmd: scoop install php
+  depends: scoop

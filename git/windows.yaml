@@ -1,0 +1,5 @@
+links: 
+  .gitconfig: ~\.gitconfig
+installs: 
+  cmd: scoop install git
+  depends: scoop

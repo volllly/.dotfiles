@@ -1,0 +1,13 @@
+editorconfig.editorconfig
+eamodio.gitlens
+sandcastle.vscode-open
+ban.spellright
+oijaz.unicode-latex
+vscodevim.vim
+
+
+
+
+
+
+

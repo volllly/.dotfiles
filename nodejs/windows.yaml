@@ -1,0 +1,3 @@
+installs: 
+  cmd: scoop install nodejs
+  depends: scoop

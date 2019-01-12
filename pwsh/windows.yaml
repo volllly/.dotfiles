@@ -1,0 +1,3 @@
+installs: 
+  cmd: scoop install pwsh
+  depends: scoop

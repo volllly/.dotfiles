@@ -1,0 +1,7 @@
+links:
+  caps-hjkl-or-esc.ahk: ~\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\caps-hjkl-or-esc.ahk
+installs: 
+  cmd: sudo scoop install autohotkey-installer
+  depends: 
+    - scoop
+    - sudo

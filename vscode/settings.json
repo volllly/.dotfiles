@@ -1,0 +1,75 @@
+{
+    "editor.tabSize": 2,
+    "editor.fontFamily": "PragmataPro Liga, Consolas, 'Courier New', monospace",
+    "editor.fontLigatures": true,
+    "debug.toolBarLocation": "docked",
+    "gitlens.gitExplorer.location": "scm",
+    "gitlens.historyExplorer.location": "scm",
+    "gitlens.resultsExplorer.location": "scm",
+    "editor.minimap.enabled": false,
+    "java.home": "C:\\Users\\paulv\\scoop\\apps\\oraclejdk\\current",
+    "explorer.confirmDragAndDrop": false,
+    "git.enableSmartCommit": true,
+    "git.confirmSync": false,
+    "git.autofetch": true,
+    "latex-workshop.message.update.show": false,
+    "latex-workshop.view.pdf.viewer": "tab",
+    "latex-workshop.latex.outputDir": "./dist/",
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "latexmk",
+            "tools": [
+                "latexmk"
+            ]
+        }
+    ],
+    "latex-workshop.latex.tools": [
+        {
+            "name": "latexmk",
+            "command": "latexmk",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-pdf",
+                "-aux-directory=dist",
+                "-output-directory=dist",
+                "%DOC%"
+            ]
+        },
+        {
+            "name": "pdflatex",
+            "command": "xetex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-aux-directory=dist",
+                "-output-directory=dist",
+                "%DOC%"
+            ]
+        }
+    ],
+    "spellright.notificationClass": "warning",
+    "spellright.language": [
+        "de"
+    ],
+    "spellright.documentTypes": [
+        "markdown",
+        "latex",
+        "plaintext"
+    ],
+    "gitlens.views.repositories.location": "scm",
+    "gitlens.views.fileHistory.location": "scm",
+    "gitlens.views.lineHistory.location": "scm",
+    "gitlens.views.compare.location": "scm",
+    "gitlens.views.search.location": "scm",
+    "window.zoomLevel": 0,
+    "vim.cursorStylePerMode.normal": "underline",
+    "vim.sneak": true,
+    "vim.useSystemClipboard": true,
+    "workbench.statusBar.feedback.visible": false,
+    "gitlens.statusBar.enabled": false,
+    "terminal.external.windowsExec": "pwsh.exe",
+    "terminal.integrated.shell.windows": "pwsh.exe"
+}
