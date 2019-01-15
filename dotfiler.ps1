@@ -21,7 +21,17 @@ Get-ChildItem $PSScriptRoot -Directory | ForEach-Object {
   $cfg = ConvertFrom-YAML $cfgfile
   Switch($command) {
     "install" {
-
+      if($cfg["installs"]) {
+        Write-Output "installing $($currentName)"
+        if($cfg["installs"].GetType().Name -eq "String") {
+          $cfg["installs"] = @{ "cmd" = $cfg["installs"]}
+        }
+        if($cfg["installs"]["depends"]) {
+          if($cfg["installs"]["depends"].GetType().Name -eq "String") {
+            $cfg["installs"]["depends"] = @($cfg["installs"]["depends"])
+          }
+        }
+      }
     }
     "update" {
 
