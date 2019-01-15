@@ -73,5 +73,6 @@
     "terminal.external.windowsExec": "pwsh.exe",
     "terminal.integrated.shell.windows": "pwsh.exe",
     "powershell.powerShellDefaultVersion": "PowerShell Core 6.1.1 (x64)",
-    "powershell.powerShellExePath": "pwsh.exe"
+    "powershell.powerShellExePath": "pwsh.exe",
+    "powershell.developer.powerShellExePath": "pwsh.exe"
 }

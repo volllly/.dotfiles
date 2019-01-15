@@ -1,4 +1,9 @@
-installs: >
-  set-executionpolicy remotesigned -s currentuser 
-  iex (new-object net.webclient).downloadstring('https://get.scoop.sh')
-  scoop bucket add extras
+installs: |
+  if(!(Get-Command "scoop" -errorAction SilentlyContinue)) {
+    set-executionpolicy remotesigned -s currentuser 
+    iex (new-object net.webclient).downloadstring('https://get.scoop.sh')
+  }
+  if(scoop bucket list | Foreach {$s = $False } {$s = (($_ -Contains "extras") -Or ($s)) } { !($s) }) {
+    scoop bucket add extras
+  }
+  scoop update

@@ -2,5 +2,6 @@ installs:
   cmd: scoop install latex
   depends: 
     - scoop
+    - perl
 depends:
   - perl
