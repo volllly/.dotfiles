@@ -10,7 +10,7 @@ installs:
     }
   depends: scoop
 updates: |-
-  Get-Content .\extensions.txt | ForEach-Object {
+  Get-Content .\vscode\extensions.txt | ForEach-Object {
     code --install-extension $_
   }
 depends: pwsh

@@ -101,7 +101,7 @@ module.exports = {
 
     // for setting shell arguments (i.e. for using interactive shellArgs: `['-i']`)
     // by default `['--login']` will be used
-    shellArgs: [],
+    shellArgs: ['-i'],
 
     // for environment variables
     env: {},
@@ -117,7 +117,7 @@ module.exports = {
 
     // if `true` (without backticks and without quotes), on right click selected text will be copied or pasted if no
     // selection is present (`true` by default on Windows and disables the context menu feature)
-    // quickEdit: true,
+    quickEdit: false,
 
     // URL to custom bell
     // bellSoundURL: 'http://example.com/bell.mp3',

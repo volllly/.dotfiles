@@ -87,6 +87,10 @@ function Links($name) {
 }
 
 function Upadtes($name) {
+  Write-Host "linking $name"
+  $updates = $cfg[$name]["updates"]
+
+  Invoke-Expression $updates
 
   Write-Host ""
 }
@@ -100,7 +104,9 @@ $cfg.Keys | ForEach-Object {
       }
     }
     "update" {
-
+      if($cfg[$name]["updates"]) {
+        Updates $name
+      }
     }
     "link" {
       if($cfg[$name]["links"]) {
