@@ -5,7 +5,10 @@ Param(
     "install",
     "update",
     "link"
-  )
+  ),
+  [Switch]$NoUpdate = $False,
+  [Switch]$NoLink = $False,
+  [Switch]$NoInstall = $False
 )
 
 if (!(Get-Module -ListAvailable -Name powershell-yaml)) {
@@ -62,9 +65,9 @@ function Installs($name) {
 
   Write-Host "installing $name"
 
-  $cfg[$name]["installs"]["installed"] = $True
-
   Invoke-Expression $installs["cmd"]
+
+  $cfg[$name]["installs"]["installed"] = $True
 
   if($depends) {
     $depends | ForEach-Object {
@@ -95,23 +98,39 @@ function Upadtes($name) {
   Write-Host ""
 }
 
+function Help() {
+  Write-Error "not implemented"
+}
+
 $cfg.Keys | ForEach-Object {
   $name = $_
   Switch($command) {
     "install" {
-      if($cfg[$name].ContainsKey("installs")) {
+      if($cfg[$name]["links"] -And !($NoLink)) {
+        Links $name
+      }
+      if($cfg[$name]["installs"] -And !($NoInstall)) {
         Installs $name
       }
     }
     "update" {
-      if($cfg[$name]["updates"]) {
+      if($cfg[$name]["links"] -And !($NoLink)) {
+        Links $name
+      }
+      if($cfg[$name]["updates"] -And !($NoUpdate)) {
         Updates $name
       }
     }
     "link" {
-      if($cfg[$name]["links"]) {
+      if($cfg[$name]["links"] -And !($NoLinks)) {
         Links $name
       }
+    }
+    "help" {
+      Help
+    }
+    default {
+      Help
     }
   }
 }
