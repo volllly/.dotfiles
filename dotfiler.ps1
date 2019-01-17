@@ -1,11 +1,8 @@
 [CmdletBinding()]
 Param(
   [Parameter(Mandatory=$true,ValueFromPipelineByPropertyName=$true)]
-  $command=(
-    "install",
-    "update",
-    "link"
-  ),
+  [ValidateSet("install", "update", "link", "help")]
+  $Command = "help",
   [Switch]$NoUpdate = $False,
   [Switch]$NoLink = $False,
   [Switch]$NoInstall = $False
