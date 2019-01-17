@@ -1,6 +1,6 @@
 {
     "editor.tabSize": 2,
-    "editor.fontFamily": "PragmataPro Liga, Consolas, 'Courier New', monospace",
+    "editor.fontFamily": "PragmataPro Liga, Fira Code, 'Courier New', monospace",
     "editor.fontLigatures": true,
     "debug.toolBarLocation": "docked",
     "gitlens.gitExplorer.location": "scm",
@@ -73,5 +73,6 @@
     "terminal.external.windowsExec": "pwsh.exe",
     "terminal.integrated.shell.windows": "pwsh.exe",
     "powershell.powerShellDefaultVersion": "PowerShell Core 6.1.1 (x64)",
-    "powershell.powerShellExePath": "pwsh.exe"
+    "powershell.powerShellExePath": "pwsh.exe",
+    "powershell.developer.powerShellExePath": "pwsh.exe"
 }

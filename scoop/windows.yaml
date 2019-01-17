@@ -1,4 +1,7 @@
-installs: >
-  set-executionpolicy remotesigned -s currentuser 
-  iex (new-object net.webclient).downloadstring('https://get.scoop.sh')
+installs: |-
+  if(!(Get-Command "scoop" -errorAction SilentlyContinue)) {
+    set-executionpolicy remotesigned -s currentuser 
+    iex (new-object net.webclient).downloadstring('https://get.scoop.sh')
+  }
   scoop bucket add extras
+  scoop update
