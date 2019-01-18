@@ -9,6 +9,8 @@ Plug 'gabenespoli/vim-cider-vinegar'
 Plug 'airblade/vim-gitgutter'
 Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-surround'
+Plug 'easymotion/vim-easymotion'
 
 call plug#end()
 
@@ -24,3 +26,17 @@ set number      " show number line
 set fcs=eob:\   " remove tilde on eob
 set tabstop=2 softtabstop=2 expandtab shiftwidth=2 smarttab
 GuiFont! PragmataPro Mono Liga
+GuiTabline 0
+set clipboard^=unnamedplus " use system clipboard
+cd ~/
+
+" Project Drawer
+let g:netrw_banner = 0
+let g:netrw_liststyle = 3
+let g:netrw_browse_split = 4
+let g:netrw_altv = 1
+let g:netrw_winsize = 25
+augroup ProjectDrawer
+  autocmd!
+  autocmd VimEnter * :Vexplore
+augroup ENDNERDTree
