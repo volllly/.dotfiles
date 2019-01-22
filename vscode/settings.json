@@ -72,7 +72,6 @@
     "gitlens.statusBar.enabled": false,
     "terminal.external.windowsExec": "powershell.exe",
     "terminal.integrated.shell.windows": "powershell.exe",
-    "powershell.powerShellDefaultVersion": "PowerShell Core 6.1.1 (x64)",
     "powershell.powerShellExePath": "powershell.exe",
     "powershell.developer.powerShellExePath": "powershell.exe",
     "files.insertFinalNewline": true
