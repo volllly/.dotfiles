@@ -13,4 +13,4 @@ updates: |-
   Get-Content .\vscode\extensions.txt | ForEach-Object {
     code --install-extension $_
   }
-depends: pwsh
+depends: powershell
