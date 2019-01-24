@@ -12,3 +12,4 @@ installs:
       )
     )
   depends: scoop
+depends: ctags

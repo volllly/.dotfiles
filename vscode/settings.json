@@ -70,9 +70,9 @@
     "vim.useSystemClipboard": true,
     "workbench.statusBar.feedback.visible": false,
     "gitlens.statusBar.enabled": false,
-    "terminal.external.windowsExec": "powershell.exe",
-    "terminal.integrated.shell.windows": "powershell.exe",
-    "powershell.powerShellExePath": "powershell.exe",
-    "powershell.developer.powerShellExePath": "powershell.exe",
+    "terminal.external.windowsExec": "C:/WINDOWS/System32/WindowsPowerShell/v1.0/powershell.exe",
+    "terminal.integrated.shell.windows": "C:/WINDOWS/System32/WindowsPowerShell/v1.0/powershell.exe",
+    "powershell.powerShellExePath": "C:/WINDOWS/System32/WindowsPowerShell/v1.0/powershell.exe",
+    "powershell.developer.powerShellExePath": "C:/WINDOWS/System32/WindowsPowerShell/v1.0/powershell.exe",
     "files.insertFinalNewline": true
 }

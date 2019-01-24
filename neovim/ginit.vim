@@ -33,14 +33,15 @@ set tabstop=2 softtabstop=2 expandtab shiftwidth=2 smarttab
 GuiFont! PragmataPro Mono Liga
 GuiTabline 0
 set clipboard^=unnamed,unnamedplus " use system clipboard
-set shell=powershell
+
+set shell=C:/WINDOWS/System32/WindowsPowerShell/v1.0/powershell.exe
 set shellpipe=|
+set shellquote="
+set shellxquote="
 set shellredir=>
 set shellcmdflag=\ -NoLogo\ -NoProfile\ -NonInteractive\ -Command
-" let &shellxquote=' '
 
 let g:gutentags_ctags_exclude = ["tmp", ".vscode", "*.min.js", "*.min.css", "build", "vendor", ".git", "node_modules", "*.vim/bundle/*"]
-let g:gutentags_trace = 1
 
 let g:deoplete#enable_at_startup=1
 
