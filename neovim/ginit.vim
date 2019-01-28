@@ -4,7 +4,6 @@ call plug#begin()
 Plug 'morhetz/gruvbox'
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
-"Plug 'itchyny/lightline.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
@@ -15,6 +14,7 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'vim-syntastic/syntastic'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'ludovicchabant/vim-gutentags'
+Plug 'PProvost/vim-ps1'
 
 call plug#end()
 
@@ -44,6 +44,11 @@ set shellcmdflag=\ -NoLogo\ -NoProfile\ -NonInteractive\ -Command
 let g:gutentags_ctags_exclude = ["tmp", ".vscode", "*.min.js", "*.min.css", "build", "vendor", ".git", "node_modules", "*.vim/bundle/*"]
 
 let g:deoplete#enable_at_startup=1
+
+:command WQ wq
+:command Wq wq
+:command W w
+:command Q q
 
 let NERDTreeMinimalUI=1
 cd ~/

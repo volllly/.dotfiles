@@ -1,11 +1,13 @@
 [CmdletBinding()]
 Param(
-  [Parameter(Mandatory=$true,ValueFromPipelineByPropertyName=$true)]
+  [Parameter(Mandatory=$true,ValueFromPipelineByPropertyName=$true,Position=0)]
   [ValidateSet("install", "update", "link", "help")]
   $Command = "help",
   [Switch]$NoUpdate = $False,
   [Switch]$NoLink = $False,
-  [Switch]$NoInstall = $False
+  [Switch]$NoInstall = $False,
+  [Parameter(Mandatory=$TRUE,ValueFromRemainingArguments=$TRUE,Position=1)]
+  [String[]] $Dotfiles
 )
 
 if (!(Get-Module -ListAvailable -Name powershell-yaml)) {
@@ -101,33 +103,35 @@ function Help() {
 
 $cfg.Keys | ForEach-Object {
   $name = $_
-  Switch($command) {
-    "install" {
-      if($cfg[$name]["links"] -And !($NoLink)) {
-        Links $name
+  if($Dotfiles.Contains("*") -Or $Dotfiles.Contains($name)) {
+    Switch($command) {
+      "install" {
+        if($cfg[$name]["links"] -And !($NoLink)) {
+          Links $name
+        }
+        if($cfg[$name]["installs"] -And !($NoInstall)) {
+          Installs $name
+        }
       }
-      if($cfg[$name]["installs"] -And !($NoInstall)) {
-        Installs $name
+      "update" {
+        if($cfg[$name]["links"] -And !($NoLink)) {
+          Links $name
+        }
+        if($cfg[$name]["updates"] -And !($NoUpdate)) {
+          Updates $name
+        }
       }
-    }
-    "update" {
-      if($cfg[$name]["links"] -And !($NoLink)) {
-        Links $name
+      "link" {
+        if($cfg[$name]["links"] -And !($NoLinks)) {
+          Links $name
+        }
       }
-      if($cfg[$name]["updates"] -And !($NoUpdate)) {
-        Updates $name
+      "help" {
+        Help
       }
-    }
-    "link" {
-      if($cfg[$name]["links"] -And !($NoLinks)) {
-        Links $name
+      default {
+        Help
       }
-    }
-    "help" {
-      Help
-    }
-    default {
-      Help
     }
   }
 }
