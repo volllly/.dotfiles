@@ -1,12 +1,15 @@
 [CmdletBinding()]
 Param(
-  [Parameter(Mandatory=$true,ValueFromPipelineByPropertyName=$true,Position=0)]
-  [ValidateSet("install", "update", "link", "help")]
-  $Command = "help",
+  [Parameter(Mandatory=$True,ValueFromPipelineByPropertyName=$True,Position=0)]
+  [ValidateSet("Install", "Update", "Link", "Help")]
+  $Command = "Help",
   [Switch]$NoUpdate = $False,
   [Switch]$NoLink = $False,
   [Switch]$NoInstall = $False,
-  [Parameter(Mandatory=$TRUE,ValueFromRemainingArguments=$TRUE,Position=1)]
+  [Parameter(ValueFromPipelineByPropertyName=$True)]
+  [ValidateSet("SymbolicLink", "HardLink")]
+  $LinkType = "HardLink",
+  [Parameter(Mandatory=$True,ValueFromRemainingArguments=$True)]
   [String[]] $Dotfiles
 )
 
@@ -91,7 +94,7 @@ function Links($name) {
     $Key = $_
     $links[$Key] | ForEach-Object {
       Write-Host "  $Key -> $_"
-      New-Item -Path $_ -ItemType HardLink -Value $(Join-Path -Path $PSScriptRoot -ChildPath $(Join-Path -Path $name -ChildPath $Key)) -Force | Out-Null
+      New-Item -Path $_ -ItemType $LinkType -Value $(Join-Path -Path $PSScriptRoot -ChildPath $(Join-Path -Path $name -ChildPath $Key)) -Force | Out-Null
     }
   }
   Write-Host ""
