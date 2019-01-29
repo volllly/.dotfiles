@@ -1,5 +1,6 @@
 links:
   ginit.vim: ~\AppData\Local\nvim\ginit.vim
+  init.vim: ~\AppData\Local\nvim\init.vim
 installs: 
   cmd: |-
     scoop install neovim

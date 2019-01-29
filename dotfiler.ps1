@@ -30,15 +30,21 @@ Get-ChildItem $PSScriptRoot -Directory | ForEach-Object {
   foreach ($line in Get-Content $currentFile) { $cfgfile += "`n" + $line }
   $cfg[$currentName] = ConvertFrom-YAML $cfgfile
   if($cfg[$currentName]["installs"]) {
-    if($cfg[$currentName]["installs"].GetType().Name -eq "String") {
+    if($cfg[$currentName]["installs"].GetType().Name -Eq "String") {
       $cfg[$currentName]["installs"] = @{ "cmd" = $cfg[$currentName]["installs"]}
     }
     if($cfg[$currentName]["installs"]["depends"]) {
-      if($cfg[$currentName]["installs"]["depends"].GetType().Name -eq "String") {
+      if($cfg[$currentName]["installs"]["depends"].GetType().Name -Eq "String") {
         $cfg[$currentName]["installs"]["depends"] = @($cfg[$currentName]["installs"]["depends"])
       }
     }
     $cfg[$currentName]["installs"]["installed"] = $False
+  }
+  if($cfg[$currentName]["links"]) {
+    if($cfg[$currentName]["links"].GetType().Name -Eq "String") {
+      $cfg[$currentName]["links"] = @($cfg[$currentName]["links"])
+        
+    }
   }
 }
 
@@ -82,8 +88,11 @@ function Links($name) {
   Write-Host "linking $name"
   $links = $cfg[$name]["links"]
   $links.Keys | ForEach-Object {
-    Write-Host "  $_ -> $($links[$_])"
-    New-Item -Path $links.$_ -ItemType HardLink -Value $(Join-Path -Path $PSScriptRoot -ChildPath $(Join-Path -Path $name -ChildPath $_)) -Force | Out-Null
+    $Key = $_
+    $links[$Key] | ForEach-Object {
+      Write-Host "  $Key -> $_"
+      New-Item -Path $_ -ItemType HardLink -Value $(Join-Path -Path $PSScriptRoot -ChildPath $(Join-Path -Path $name -ChildPath $Key)) -Force | Out-Null
+    }
   }
   Write-Host ""
 }

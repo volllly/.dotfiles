@@ -13,7 +13,6 @@ Plug 'easymotion/vim-easymotion'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'vim-syntastic/syntastic'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'ludovicchabant/vim-gutentags'
 Plug 'PProvost/vim-ps1'
 
 call plug#end()
@@ -40,8 +39,6 @@ set shellquote="
 set shellxquote="
 set shellredir=>
 set shellcmdflag=\ -NoLogo\ -NoProfile\ -NonInteractive\ -Command
-
-let g:gutentags_ctags_exclude = ["tmp", ".vscode", "*.min.js", "*.min.css", "build", "vendor", ".git", "node_modules", "*.vim/bundle/*"]
 
 let g:deoplete#enable_at_startup=1
 
