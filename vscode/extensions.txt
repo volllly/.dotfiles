@@ -4,10 +4,4 @@ sandcastle.vscode-open
 ban.spellright
 oijaz.unicode-latex
 vscodevim.vim
-
-
-
-
-
-
-
+tomphilbin.gruvbox-themes
