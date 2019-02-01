@@ -6,11 +6,11 @@ installs:
   cmd: |-
     scoop install vscode
     Get-Content .\vscode\extensions.txt | ForEach-Object {
-      code --install-extension $_
+      code --install-extension $_ --force
     }
   depends: scoop
 updates: |-
   Get-Content .\vscode\extensions.txt | ForEach-Object {
-    code --install-extension $_
+    code --install-extension $_ --force
   }
-depends: powershell
+depends: pwsh

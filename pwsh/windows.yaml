@@ -3,5 +3,5 @@ links:
 installs: 
   cmd: |-
     scoop install posh-git
-    scoop install powershell
+    scoop install pwsh
   depends: scoop
