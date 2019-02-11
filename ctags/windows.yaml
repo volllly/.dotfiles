@@ -1,5 +1,0 @@
-links:
-  .ctags: ~/.ctags
-installs: 
-  cmd:  scoop install ctags
-  depends: scoop
