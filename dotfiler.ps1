@@ -6,6 +6,7 @@ Param(
   [Switch]$NoUpdate = $False,
   [Switch]$NoLink = $False,
   [Switch]$NoInstall = $False,
+  [Switch]$Pull = $False,
   [Parameter(ValueFromPipelineByPropertyName=$True)]
   [ValidateSet("SymbolicLink", "HardLink")]
   $LinkType = "HardLink",
@@ -51,6 +52,11 @@ Get-ChildItem $PSScriptRoot -Directory | ForEach-Object {
   }
 }
 
+if($Pull) {
+  Write-Host "Pulling from git remote"
+  Invoke-Expression "git pull"
+  Write-Host ""
+}
 
 function Installs($name) {
   $installs = $cfg[$name]["installs"]
