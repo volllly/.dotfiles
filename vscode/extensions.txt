@@ -1,8 +1,8 @@
 editorconfig.editorconfig
-eamodio.gitlens
 sandcastle.vscode-open
 ban.spellright
 oijaz.unicode-latex
 tomphilbin.gruvbox-themes
 mrmlnc.vscode-apache
 jpotterm.simple-vim
+waderyan.gitblame
