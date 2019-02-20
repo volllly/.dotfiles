@@ -75,5 +75,8 @@
     "powershell.powerShellExePath": "C:/WINDOWS/System32/WindowsPowerShell/v1.0/powershell.exe",
     "powershell.developer.powerShellExePath": "C:/WINDOWS/System32/WindowsPowerShell/v1.0/powershell.exe",
     "files.insertFinalNewline": true,
-    "workbench.colorTheme": "Gruvbox Dark (Medium)"
+    "workbench.colorTheme": "Gruvbox Dark (Medium)",
+    "vim.enableNeovim": true,
+    "vim.neovimPath": "../../../shims/nvim.exe",
+    "latex-workshop.latex.outDir": "./dist/"
 }

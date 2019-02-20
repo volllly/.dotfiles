@@ -3,5 +3,6 @@ eamodio.gitlens
 sandcastle.vscode-open
 ban.spellright
 oijaz.unicode-latex
-vscodevim.vim
 tomphilbin.gruvbox-themes
+mrmlnc.vscode-apache
+jpotterm.simple-vim
