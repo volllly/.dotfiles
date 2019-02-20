@@ -78,5 +78,12 @@
     "workbench.colorTheme": "Gruvbox Dark (Medium)",
     "vim.enableNeovim": true,
     "vim.neovimPath": "../../../shims/nvim.exe",
-    "latex-workshop.latex.outDir": "./dist/"
+    "latex-workshop.latex.outDir": "./dist/",
+    "es6-css-minify.genCSSmap": true,
+    "es6-css-minify.genJSmap": true,
+    "es6-css-minify.hideButton": true,
+    "es6-css-minify.minifyOnSave": "yes",
+    "powershell.debugging.createTemporaryIntegratedConsole": true,
+    "powershell.integratedConsole.showOnStartup": false,
+    "html.format.indentInnerHtml": true
 }
