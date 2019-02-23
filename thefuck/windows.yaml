@@ -1,0 +1,4 @@
+installs:
+  cmd: pip3 install thefuck
+  depends: python3
+depends: python3
