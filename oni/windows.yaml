@@ -1,6 +1,0 @@
-links:
-  config.tsx: ~/AppData/Roaming/oni/config.tsx 
-installs:
-  cmd: scoop install oni
-  depends: scoop
-depends: neovim
