@@ -1,7 +1,7 @@
 [CmdletBinding()]
 Param(
   [Parameter(Mandatory=$True,ValueFromPipelineByPropertyName=$True,Position=0)]
-  [ValidateSet("Install", "Update", "Link", "Help")]
+  [ValidateSet("Install", "Update", "Link", "Sync", "Help")]
   $Command = "Help",
   [Switch]$NoUpdate = $False,
   [Switch]$NoLink = $False,
@@ -14,7 +14,7 @@ Param(
   [String[]] $Dotfiles
 )
 
-if (!(Get-Module -ListAvailable -Name powershell-yaml)) {
+If(!(Get-Module -ListAvailable -Name powershell-yaml)) {
   Install-Module powershell-yaml -Scope CurrentUser
 } 
 Import-Module powershell-yaml
@@ -27,50 +27,50 @@ Get-ChildItem $PSScriptRoot -Directory | ForEach-Object {
   $cfgfile = ''
   $currentFile = $(Join-Path -Path $currentDirectory -ChildPath "windows.yaml")
 
-  if(!(Test-Path $currentFile)) {
+  If(!(Test-Path $currentFile)) {
     Return
   }
   
-  foreach ($line in Get-Content $currentFile) { $cfgfile += "`n" + $line }
+  foreach ($line In Get-Content $currentFile) { $cfgfile += "`n" + $line }
   $cfg[$currentName] = ConvertFrom-YAML $cfgfile
-  if($cfg[$currentName]["installs"]) {
-    if($cfg[$currentName]["installs"].GetType().Name -Eq "String") {
+  If($cfg[$currentName]["installs"]) {
+    If($cfg[$currentName]["installs"].GetType().Name -Eq "String") {
       $cfg[$currentName]["installs"] = @{ "cmd" = $cfg[$currentName]["installs"]}
     }
-    if($cfg[$currentName]["installs"]["depends"]) {
-      if($cfg[$currentName]["installs"]["depends"].GetType().Name -Eq "String") {
+    If($cfg[$currentName]["installs"]["depends"]) {
+      If($cfg[$currentName]["installs"]["depends"].GetType().Name -Eq "String") {
         $cfg[$currentName]["installs"]["depends"] = @($cfg[$currentName]["installs"]["depends"])
       }
     }
     $cfg[$currentName]["installs"]["installed"] = $False
   }
-  if($cfg[$currentName]["links"]) {
-    if($cfg[$currentName]["links"].GetType().Name -Eq "String") {
+  If($cfg[$currentName]["links"]) {
+    If($cfg[$currentName]["links"].GetType().Name -Eq "String") {
       $cfg[$currentName]["links"] = @($cfg[$currentName]["links"])
         
     }
   }
 }
 
-if($Pull) {
+If($Pull) {
   Write-Host "Pulling from git remote"
   Invoke-Expression "git pull"
   Write-Host ""
 }
 
-function Installs($name) {
+Function Installs($name) {
   $installs = $cfg[$name]["installs"]
   $depends = $cfg[$name]["depends"]
 
-  if(($installs["installed"]) -Or ($installs["error"])) {
+  If(($installs["installed"]) -Or ($installs["error"])) {
     Return
   }
 
-  if(($installs["depended"] -Gt 1) -Or ($cfg[$name]["depended"] -Gt 1)) {
+  If(($installs["depended"] -Gt 1) -Or ($cfg[$name]["depended"] -Gt 1)) {
     Write-Host "detected circular dependency for $name" -ForegroundColor Red
     Return
   }
-  if($installs["depends"]) {
+  If($installs["depends"]) {
     $installs["depends"] | ForEach-Object {
     $cfg[$_]["installs"]["depended"] += 1
     Installs $_
@@ -83,7 +83,7 @@ function Installs($name) {
 
   $cfg[$name]["installs"]["installed"] = $True
 
-  if($depends) {
+  If($depends) {
     $depends | ForEach-Object {
       $cfg[$_]["depended"] += 1
       Installs $_
@@ -93,7 +93,7 @@ function Installs($name) {
   Write-Host ""
 }
 
-function Links($name) {
+Function Links($name) {
   Write-Host "linking $name"
   $links = $cfg[$name]["links"]
   $links.Keys | ForEach-Object {
@@ -106,7 +106,7 @@ function Links($name) {
   Write-Host ""
 }
 
-function Upadtes($name) {
+Function Upadtes($name) {
   Write-Host "linking $name"
   $updates = $cfg[$name]["updates"]
 
@@ -115,40 +115,66 @@ function Upadtes($name) {
   Write-Host ""
 }
 
-function Help() {
+Function Syncs($path) {
+  $changes = @{}
+
+  Invoke-Expression "git add $path/* -v" | ForEach-Object {
+    $changes[$_.Split(" ")[1].Trim("'").Split("/")[0]] = $True
+  }
+
+  If($changes.Count -Ne 0) {
+    $message = ""
+    $changes.Keys | ForEach-Object {
+      $message = "Update $_."
+    }
+    Invoke-Expression "git commit -m `"$message`""
+  }
+
+  Invoke-Expression "git pull"
+  Invoke-Expression "git push"
+}
+
+Function Help() {
   Write-Error "not implemented"
 }
 
-$cfg.Keys | ForEach-Object {
-  $name = $_
-  if($Dotfiles.Contains("*") -Or $Dotfiles.Contains($name)) {
-    Switch($command) {
-      "install" {
-        if($cfg[$name]["links"] -And !($NoLink)) {
-          Links $name
+Switch($Command) {
+  "Sync" {
+    Syncs $Dotfiles
+  }
+  default {
+    $cfg.Keys | ForEach-Object {
+      $name = $_
+      If($Dotfiles.Contains("*") -Or $Dotfiles.Contains($name)) {
+        Switch($Command) {
+          "Install" {
+            If($cfg[$name]["links"] -And !($NoLink)) {
+              Links $name
+            }
+            If($cfg[$name]["installs"] -And !($NoInstall)) {
+              Installs $name
+            }
+          }
+          "Update" {
+            If($cfg[$name]["links"] -And !($NoLink)) {
+              Links $name
+            }
+            If($cfg[$name]["updates"] -And !($NoUpdate)) {
+              Updates $name
+            }
+          }
+          "Link" {
+            If($cfg[$name]["links"] -And !($NoLinks)) {
+              Links $name
+            }
+          }
+          "help" {
+            Help
+          }
+          default {
+            Help
+          }
         }
-        if($cfg[$name]["installs"] -And !($NoInstall)) {
-          Installs $name
-        }
-      }
-      "update" {
-        if($cfg[$name]["links"] -And !($NoLink)) {
-          Links $name
-        }
-        if($cfg[$name]["updates"] -And !($NoUpdate)) {
-          Updates $name
-        }
-      }
-      "link" {
-        if($cfg[$name]["links"] -And !($NoLinks)) {
-          Links $name
-        }
-      }
-      "help" {
-        Help
-      }
-      default {
-        Help
       }
     }
   }
