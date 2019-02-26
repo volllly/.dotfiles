@@ -1,8 +1,0 @@
-links:
-  .hyper.js: ~\.hyper.js 
-installs: 
-  cmd: scoop install hyper
-  depends: 
-    - scoop
-depends:
-  - pwsh

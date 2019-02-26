@@ -1,3 +1,0 @@
-installs: 
-  cmd: scoop install sudo
-  depends: scoop

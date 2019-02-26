@@ -1,3 +1,0 @@
-installs:
-  cmd: scoop install aria2
-  depends: scoop

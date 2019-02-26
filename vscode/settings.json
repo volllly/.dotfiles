@@ -85,5 +85,18 @@
     "es6-css-minify.minifyOnSave": "exists",
     "powershell.debugging.createTemporaryIntegratedConsole": true,
     "powershell.integratedConsole.showOnStartup": false,
-    "html.format.indentInnerHtml": true
+    "html.format.indentInnerHtml": true,
+    "markdown-preview-enhanced.pandocMarkdownFlavor": "gfm",
+    "mssql.connections": [
+        {
+            "server": "fiskaltrust-ne-1.database.windows.net",
+            "database": "",
+            "authenticationType": "SqlLogin",
+            "user": "support",
+            "password": "",
+            "emptyPasswordInput": false,
+            "savePassword": true,
+            "profileName": "ft-public-cpy"
+        }
+    ]
 }

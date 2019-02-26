@@ -1,8 +1,22 @@
+Import-Module powershell-yaml
+Install-Module Poshstache
 
+<#
+  .Synopsis
+  Manages your dotfiles from a git repo.
+
+  .Description
+  Automatically clones and links your dotfiles.
+  Automatically installs and updates your applications.
+
+  .Parameter Command
+#>
+
+Function Dotfiler {
   [CmdletBinding()]
   Param(
     [Parameter(Mandatory=$True,ValueFromPipelineByPropertyName=$True,Position=0)]
-    [ValidateSet("Install", "Update", "Link", "Sync", "Help")]
+    [ValidateSet("Install", "Update", "Link", "Sync", "Setup", "Help")]
     $Command = "Help",
     [Switch]$NoUpdate = $False,
     [Switch]$NoLink = $False,
@@ -15,7 +29,6 @@
     [String[]] $Dotfiles
   )
 
-Import-Module powershell-yaml
   $cfg = @{}
 
   Get-ChildItem $PSScriptRoot -Directory | ForEach-Object {
@@ -176,3 +189,6 @@ Import-Module powershell-yaml
       }
     }
   }
+}
+
+Export-ModuleMember -Function Dotfiler

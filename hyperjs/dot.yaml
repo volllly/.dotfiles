@@ -1,0 +1,4 @@
+links:
+  .hyper.js: ~\.hyper.js 
+depends:
+  - pwsh

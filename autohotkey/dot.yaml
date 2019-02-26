@@ -4,3 +4,7 @@ installs:
   cmd: scoop install autohotkey-installer
   depends: 
     - scoop
+updates: 
+  cmd: scoop update autohotkey-installer
+  depends: 
+    - scoop
