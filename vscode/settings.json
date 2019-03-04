@@ -98,5 +98,10 @@
             "savePassword": true,
             "profileName": "ft-public-cpy"
         }
-    ]
+    ],
+    "editor.renderWhitespace": "boundary",
+    "editor.renderControlCharacters": true,
+    "markdown.extension.print.absoluteImgPath": false,
+    "markdown.extension.toc.updateOnSave": false,
+    "markdown.extension.toc.githubCompatibility": true
 }

@@ -1,27 +1,27 @@
 " vim-plug
 call plug#begin()
 
-"Plug 'morhetz/gruvbox'
+Plug 'morhetz/gruvbox'
 "Plug 'scrooloose/nerdtree'
 "Plug 'Xuyuanp/nerdtree-git-plugin'
-"Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline'
 "Plug 'tpope/vim-fugitive'
 "Plug 'airblade/vim-gitgutter'
 "Plug 'cohama/agit.vim'
 Plug 'tpope/vim-surround'
 "Plug 'easymotion/vim-easymotion'
 "Plug 'vim-syntastic/syntastic'
-Plug 'ctrlpvim/ctrlp.vim'
+"Plug 'ctrlpvim/ctrlp.vim'
 Plug 'PProvost/vim-ps1'
 
 call plug#end()
 
 " gruvbox theme config
-"colorscheme gruvbox
-"set background=dark
+colorscheme gruvbox
+set background=dark
 
-"let g:gruvbox_contrast_dark='hard'
-"let g:gruvbox_contrast_light='hard'
+let g:gruvbox_contrast_dark='hard'
+let g:gruvbox_contrast_light='hard'
 
 " editor config
 set number      " show number line
@@ -39,9 +39,6 @@ set shellxquote="
 set shellredir=>
 set shellcmdflag=\ -NoLogo\ -NoProfile\ -NonInteractive\ -Command
 
-"let g:gutentags_ctags_exclude = ["tmp", ".vscode", "*.min.js", "*.min.css", "build", "vendor", ".git", "node_modules", "*.vim/bundle/*"]
-
-"let g:deoplete#enable_at_startup=1
 
 :command WQ wq
 :command Wq wq
