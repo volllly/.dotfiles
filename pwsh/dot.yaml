@@ -1,2 +1,5 @@
+installs:
+  cmd: scoop install pwsh
+  depends: scoop
 links:
   Profile.ps1: ~/Documents/WindowsPowerShell/Profile.ps1

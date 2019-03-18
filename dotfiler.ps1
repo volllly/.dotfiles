@@ -16,35 +16,37 @@
   )
 
   Import-Module powershell-yaml
+  Import-Module Poshstache
+
   $cfg = @{}
   $cfgDefault = @{}
 
-    $cfgfile = ''
-    $currentFile = $(Join-Path -Path $PSScriptRoot -ChildPath "dots.yaml")
+  $cfgfile = ''
+  $currentFile = $(Join-Path -Path $PSScriptRoot -ChildPath "dots.yaml")
 
-    If(!(Test-Path $currentFile)) {
-      Return
+  If(!(Test-Path $currentFile)) {
+    Return
+  }
+  
+  foreach ($line In Get-Content $currentFile) { $cfgfile += "`n" + $line }
+  $cfgDefault = ConvertFrom-YAML $cfgfile
+  If($cfgDefault["installs"]) {
+    If($cfgDefault["installs"].GetType().Name -Eq "String") {
+      $cfgDefault = @{ "cmd" = $cfgDefault["installs"]}
     }
-    
-    foreach ($line In Get-Content $currentFile) { $cfgfile += "`n" + $line }
-    $cfgDefault = ConvertFrom-YAML $cfgfile
-    If($cfgDefault["installs"]) {
-      If($cfgDefault["installs"].GetType().Name -Eq "String") {
-        $cfgDefault = @{ "cmd" = $cfgDefault["installs"]}
-      }
-      If($cfgDefault["installs"]["depends"]) {
-        If($cfgDefault["installs"]["depends"].GetType().Name -Eq "String") {
-          $cfgDefault["installs"]["depends"] = @($cfgDefault["installs"]["depends"])
-        }
-      }
-      $cfgDefault["installs"]["installed"] = $False
-    }
-    If($cfgDefault["links"]) {
-      If($cfgDefault["links"].GetType().Name -Eq "String") {
-        $cfgDefault["links"] = @($cfgDefault["links"])
-          
+    If($cfgDefault["installs"]["depends"]) {
+      If($cfgDefault["installs"]["depends"].GetType().Name -Eq "String") {
+        $cfgDefault["installs"]["depends"] = @($cfgDefault["installs"]["depends"])
       }
     }
+    $cfgDefault["installs"]["installed"] = $False
+  }
+  If($cfgDefault["links"]) {
+    If($cfgDefault["links"].GetType().Name -Eq "String") {
+      $cfgDefault["links"] = @($cfgDefault["links"])
+        
+    }
+  }
 
   Get-ChildItem $PSScriptRoot -Directory | ForEach-Object {
     $currentDirectory = $_
@@ -67,13 +69,17 @@
 
 
     If(!($cfg[$currentName]["installs"])) {
-      $cfg[$currentName]["installs"] = $cfgDefault["installs"]
-      $cfg[$currentName]["installs"]["cmd"] = $cfg[$currentName]["installs"]["cmd"].Replace("{{name}}", $currentName)
+      $cfg[$currentName]["installs"] = $cfgDefault["installs"].Clone()
+      $cfg[$currentName]["installs"]["cmd"] = ConvertTo-PoshstacheTemplate -InputString $cfg[$currentName]["installs"]["cmd"] -ParameterObject @{
+        name = $currentName
+      }
     }
 
    If(!($cfg[$currentName]["updates"])) {
-      $cfg[$currentName]["updates"] = $cfgDefault["updates"]
-      $cfg[$currentName]["updates"]["cmd"] = $cfg[$currentName]["updates"]["cmd"].Replace("{{name}}", $currentName)
+      $cfg[$currentName]["updates"] = $cfgDefault["updates"].Clone()
+      $cfg[$currentName]["updates"]["cmd"] = ConvertTo-PoshstacheTemplate -InputString $cfg[$currentName]["updates"]["cmd"] -ParameterObject @{
+        name = $currentName
+      }
     }
     
     If(!($cfg[$currentName]["links"])) {
@@ -101,11 +107,7 @@
           
       }
     }
-
-
   }
-
-Write-Host $cfg["vscode"]["installs"].Values
 
   If($Pull) {
     Write-Host "Pulling from git remote"

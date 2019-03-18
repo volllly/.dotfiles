@@ -1,3 +1,5 @@
 installs:
   cmd: scoop bucket add extras
-  depends: scoop
+  depends: 
+    - scoop
+    - git

@@ -1,0 +1,3 @@
+installs:
+  cmd: scoop install git
+  depends: scoop

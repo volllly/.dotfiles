@@ -1,2 +1,7 @@
+installs:
+  cmd: scoop install git
+  depends:
+    - 7zip
+    - scoop
 links: 
   .gitconfig: ~\.gitconfig
