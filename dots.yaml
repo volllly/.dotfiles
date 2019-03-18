@@ -1,10 +1,10 @@
 installs:
-  cmd: scoop install {{name}}
+  cmd: scoop install __name__
   depends:
     - scoop
     - extras
 updates:
-  cmd: scoop update {{name}}
+  cmd: scoop update __name__
   depends:
     - scoop
     - extras

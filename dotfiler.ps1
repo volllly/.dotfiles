@@ -16,8 +16,8 @@
   )
 
   Import-Module powershell-yaml
-  Import-Module Poshstache
-
+  Import-Module PsTokens
+  
   $cfg = @{}
   $cfgDefault = @{}
 
@@ -44,7 +44,11 @@
   If($cfgDefault["links"]) {
     If($cfgDefault["links"].GetType().Name -Eq "String") {
       $cfgDefault["links"] = @($cfgDefault["links"])
-        
+      $cfgDefault["links"].Keys | ForEach-Object {
+          If($cfgDefault["links"][$_].GetType().Name -Eq "String") {
+            $cfgDefault["links"][$_] = @($cfgDefault["links"][$_])
+          }
+        }
     }
   }
 
@@ -70,14 +74,14 @@
 
     If(!($cfg[$currentName]["installs"])) {
       $cfg[$currentName]["installs"] = $cfgDefault["installs"].Clone()
-      $cfg[$currentName]["installs"]["cmd"] = ConvertTo-PoshstacheTemplate -InputString $cfg[$currentName]["installs"]["cmd"] -ParameterObject @{
+      $cfg[$currentName]["installs"]["cmd"] = $cfg[$currentName]["installs"]["cmd"] | Merge-Tokens -Tokens @{
         name = $currentName
       }
     }
 
    If(!($cfg[$currentName]["updates"])) {
       $cfg[$currentName]["updates"] = $cfgDefault["updates"].Clone()
-      $cfg[$currentName]["updates"]["cmd"] = ConvertTo-PoshstacheTemplate -InputString $cfg[$currentName]["updates"]["cmd"] -ParameterObject @{
+      $cfg[$currentName]["updates"]["cmd"] = $cfg[$currentName]["updates"]["cmd"] | Merge-Tokens -Tokens @{
         name = $currentName
       }
     }
@@ -104,7 +108,11 @@
     If($cfg[$currentName]["links"]) {
       If($cfg[$currentName]["links"].GetType().Name -Eq "String") {
         $cfg[$currentName]["links"] = @($cfg[$currentName]["links"])
-          
+        $cfg[$currentName]["links"].Keys | ForEach-Object {
+          If($cfg[$currentName]["links"][$_].GetType().Name -Eq "String") {
+            $cfg[$currentName]["links"][$_] = @($cfg[$currentName]["links"][$_])
+          }
+        }
       }
     }
   }
