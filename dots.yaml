@@ -1,6 +1,8 @@
 installs:
   cmd: scoop install {{name}}
   depends: scoop
-upadtes:
+updates:
   cmd: scoop update {{name}}
-  depends: scoop
+  depends:
+    - scoop
+    - extras

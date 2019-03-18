@@ -1,0 +1,3 @@
+installs:
+  cmd: scoop bucket add extras
+  depends: scoop

@@ -15,8 +15,36 @@
     [String[]] $Dotfiles
   )
 
-Import-Module powershell-yaml
+  Import-Module powershell-yaml
   $cfg = @{}
+  $cfgDefault = @{}
+
+    $cfgfile = ''
+    $currentFile = $(Join-Path -Path $PSScriptRoot -ChildPath "dots.yaml")
+
+    If(!(Test-Path $currentFile)) {
+      Return
+    }
+    
+    foreach ($line In Get-Content $currentFile) { $cfgfile += "`n" + $line }
+    $cfgDefault = ConvertFrom-YAML $cfgfile
+    If($cfgDefault["installs"]) {
+      If($cfgDefault["installs"].GetType().Name -Eq "String") {
+        $cfgDefault = @{ "cmd" = $cfgDefault["installs"]}
+      }
+      If($cfgDefault["installs"]["depends"]) {
+        If($cfgDefault["installs"]["depends"].GetType().Name -Eq "String") {
+          $cfgDefault["installs"]["depends"] = @($cfgDefault["installs"]["depends"])
+        }
+      }
+      $cfgDefault["installs"]["installed"] = $False
+    }
+    If($cfgDefault["links"]) {
+      If($cfgDefault["links"].GetType().Name -Eq "String") {
+        $cfgDefault["links"] = @($cfgDefault["links"])
+          
+      }
+    }
 
   Get-ChildItem $PSScriptRoot -Directory | ForEach-Object {
     $currentDirectory = $_
@@ -29,7 +57,33 @@ Import-Module powershell-yaml
     }
     
     foreach ($line In Get-Content $currentFile) { $cfgfile += "`n" + $line }
+
+
     $cfg[$currentName] = ConvertFrom-YAML $cfgfile
+
+    If(!($cfg[$currentName])) {
+      $cfg[$currentName] = @{}
+    }
+
+
+    If(!($cfg[$currentName]["installs"])) {
+      $cfg[$currentName]["installs"] = $cfgDefault["installs"]
+      $cfg[$currentName]["installs"]["cmd"] = $cfg[$currentName]["installs"]["cmd"].Replace("{{name}}", $currentName)
+    }
+
+   If(!($cfg[$currentName]["updates"])) {
+      $cfg[$currentName]["updates"] = $cfgDefault["updates"]
+      $cfg[$currentName]["updates"]["cmd"] = $cfg[$currentName]["updates"]["cmd"].Replace("{{name}}", $currentName)
+    }
+    
+    If(!($cfg[$currentName]["links"])) {
+      $cfg[$currentName]["links"] = $cfgDefault["links"]
+    }
+
+    If(!($cfg[$currentName]["depends"])) {
+      $cfg[$currentName]["depends"] = $cfgDefault["depends"]
+    }
+
     If($cfg[$currentName]["installs"]) {
       If($cfg[$currentName]["installs"].GetType().Name -Eq "String") {
         $cfg[$currentName]["installs"] = @{ "cmd" = $cfg[$currentName]["installs"]}
@@ -47,7 +101,11 @@ Import-Module powershell-yaml
           
       }
     }
+
+
   }
+
+Write-Host $cfg["vscode"]["installs"].Values
 
   If($Pull) {
     Write-Host "Pulling from git remote"
