@@ -103,5 +103,6 @@
     "editor.renderControlCharacters": true,
     "markdown.extension.print.absoluteImgPath": false,
     "markdown.extension.toc.updateOnSave": false,
-    "markdown.extension.toc.githubCompatibility": true
+    "markdown.extension.toc.githubCompatibility": true,
+    "powershell.codeFormatting.whitespaceBeforeOpenParen": false
 }
