@@ -189,7 +189,7 @@ Function Syncs($path) {
   If($changes.Count -Ne 0) {
     $message = ""
     $changes.Keys | ForEach-Object {
-      $message = "Update $_."
+      $message = "update $_."
     }
     Invoke-Expression "git commit -m `"$message`""
   }
