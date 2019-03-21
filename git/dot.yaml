@@ -4,4 +4,5 @@ installs:
     - 7zip
     - scoop
 links: 
+  .gitignore: ~\.gitignore
   .gitconfig: ~\.gitconfig
