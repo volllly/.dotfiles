@@ -1,4 +1,4 @@
 links:
-  .hyper.js: ~\.hyper.js 
+  .hyper.js: ~\AppData\Roaming\Hyper\.hyper.js
 depends:
   - pwsh
