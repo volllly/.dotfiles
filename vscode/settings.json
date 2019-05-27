@@ -2,6 +2,7 @@
     "editor.tabSize": 2,
     "editor.fontFamily": "PragmataPro Liga, Fira Code, 'Courier New', monospace",
     "editor.fontLigatures": true,
+    "editor.fontSize": 15,
     "debug.toolBarLocation": "docked",
     "gitlens.gitExplorer.location": "scm",
     "gitlens.historyExplorer.location": "scm",
@@ -104,5 +105,11 @@
     "markdown.extension.print.absoluteImgPath": false,
     "markdown.extension.toc.updateOnSave": false,
     "markdown.extension.toc.githubCompatibility": true,
-    "powershell.codeFormatting.whitespaceBeforeOpenParen": false
+    "powershell.codeFormatting.whitespaceBeforeOpenParen": false,
+    "explorer.confirmDelete": false,
+    "[markdown]": {
+        "editor.defaultFormatter": "fcrespo82.markdown-table-formatter"
+    },
+    "docker.groupImagesBy": "Repository",
+    "amVim.vimStyleNavigationInListView": false
 }
