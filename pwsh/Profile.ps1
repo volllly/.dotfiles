@@ -1,3 +1,12 @@
+Import-Module posh-git
+$env:PYTHONIOENCODING="utf-8"
+Invoke-Expression "$(thefuck --alias)"
+
+#region conda initialize
+# !! Contents within this block are managed by 'conda init' !!
+(& "C:\Users\paul.volavsek\scoop\apps\anaconda3\current\Scripts\conda.exe" "shell.powershell" "hook") | Out-String | Invoke-Expression
+#endregion
+
 function prompt {
   $path = $(Get-Location).Path
   if($path.StartsWith($HOME)) {
@@ -14,17 +23,9 @@ function prompt {
       $prompt += $segment
     }
   }
-  "$prompt> "
+  $vcs = Write-VcsStatus
+  if(!($vcs.Length -eq 0)) {
+    $vcs += ' '
+  }
+  "$prompt$vcs> "
 }
-
-Import-Module posh-git
-
-$env:PYTHONIOENCODING="utf-8"
-Invoke-Expression "$(thefuck --alias)"
-
-#region conda initialize
-# !! Contents within this block are managed by 'conda init' !!
-(& "C:\Users\paul.volavsek\scoop\apps\anaconda3\current\Scripts\conda.exe" "shell.powershell" "hook") | Out-String | Invoke-Expression
-#endregion
-
-
