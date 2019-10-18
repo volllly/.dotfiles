@@ -4,11 +4,7 @@
     "editor.fontLigatures": true,
     "editor.fontSize": 15,
     "debug.toolBarLocation": "docked",
-    "gitlens.gitExplorer.location": "scm",
-    "gitlens.historyExplorer.location": "scm",
-    "gitlens.resultsExplorer.location": "scm",
     "editor.minimap.enabled": false,
-    "java.home": "C:\\Users\\paulv\\scoop\\apps\\oraclejdk\\current",
     "explorer.confirmDragAndDrop": false,
     "git.enableSmartCommit": true,
     "git.confirmSync": false,
@@ -51,34 +47,12 @@
             ]
         }
     ],
-    "spellright.notificationClass": "warning",
-    "spellright.language": [
-        "de"
-    ],
-    "spellright.documentTypes": [
-        "markdown",
-        "latex",
-        "plaintext"
-    ],
-    "gitlens.views.repositories.location": "scm",
-    "gitlens.views.fileHistory.location": "scm",
-    "gitlens.views.lineHistory.location": "scm",
-    "gitlens.views.compare.location": "scm",
-    "gitlens.views.search.location": "scm",
     "window.zoomLevel": 0,
-    "vim.cursorStylePerMode.normal": "underline",
-    "vim.sneak": true,
-    "vim.useSystemClipboard": true,
-    "workbench.statusBar.feedback.visible": false,
-    "gitlens.statusBar.enabled": false,
-    "terminal.external.windowsExec": "C:/WINDOWS/System32/WindowsPowerShell/v1.0/powershell.exe",
-    "terminal.integrated.shell.windows": "C:/WINDOWS/System32/WindowsPowerShell/v1.0/powershell.exe",
-    "powershell.powerShellExePath": "C:/WINDOWS/System32/WindowsPowerShell/v1.0/powershell.exe",
-    "powershell.developer.powerShellExePath": "C:/WINDOWS/System32/WindowsPowerShell/v1.0/powershell.exe",
+    "terminal.external.windowsExec": "pwsh.exe",
+    "terminal.integrated.shell.windows": "pwsh.exe",
+    "powershell.powerShellExePath": "pwsh.exe",
     "files.insertFinalNewline": true,
     "workbench.colorTheme": "Gruvbox Dark (Medium)",
-    "vim.enableNeovim": true,
-    "vim.neovimPath": "../../../shims/nvim.exe",
     "latex-workshop.latex.outDir": "./dist/",
     "es6-css-minify.genCSSmap": true,
     "es6-css-minify.genJSmap": true,
@@ -88,29 +62,25 @@
     "powershell.integratedConsole.showOnStartup": false,
     "html.format.indentInnerHtml": true,
     "markdown-preview-enhanced.pandocMarkdownFlavor": "gfm",
-    "mssql.connections": [
-        {
-            "server": "fiskaltrust-ne-1.database.windows.net",
-            "database": "",
-            "authenticationType": "SqlLogin",
-            "user": "support",
-            "password": "",
-            "emptyPasswordInput": false,
-            "savePassword": true,
-            "profileName": "ft-public-cpy"
-        }
-    ],
     "editor.renderWhitespace": "boundary",
     "editor.renderControlCharacters": true,
-    "markdown.extension.print.absoluteImgPath": false,
-    "markdown.extension.toc.updateOnSave": false,
-    "markdown.extension.toc.githubCompatibility": true,
     "powershell.codeFormatting.whitespaceBeforeOpenParen": false,
     "explorer.confirmDelete": false,
     "[markdown]": {
         "editor.defaultFormatter": "fcrespo82.markdown-table-formatter"
     },
-    "docker.groupImagesBy": "Repository",
     "amVim.vimStyleNavigationInListView": false,
-    "amVim.bindCtrlCommands": false
+    "amVim.bindCtrlCommands": false,
+    "es6-css-minify.showLogOnWarning": false,
+    "editor.acceptSuggestionOnEnter": "smart",
+    "git.autofetchPeriod": 60,
+    "git.pullTags": false,
+    "eslint.validate": [
+        "javascript",
+        "javascriptreact",
+        "vue"
+    ],
+    "editor.suggestSelection": "first",
+    "python.dataScience.askForKernelRestart": false,
+    "debug.console.fontFamily": "PragmataPro Liga"
 }
