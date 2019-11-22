@@ -50,9 +50,8 @@
     "window.zoomLevel": 0,
     "terminal.external.windowsExec": "pwsh.exe",
     "terminal.integrated.shell.windows": "pwsh.exe",
-    "powershell.powerShellExePath": "pwsh.exe",
+    "powershell.powerShellExePath": "C:\\WINDOWS\\SysWow64\\WindowsPowerShell\\v1.0\\powershell.exe",
     "files.insertFinalNewline": true,
-    "workbench.colorTheme": "Gruvbox Dark (Medium)",
     "latex-workshop.latex.outDir": "./dist/",
     "es6-css-minify.genCSSmap": true,
     "es6-css-minify.genJSmap": true,
@@ -82,5 +81,10 @@
     ],
     "editor.suggestSelection": "first",
     "python.dataScience.askForKernelRestart": false,
-    "debug.console.fontFamily": "PragmataPro Liga"
+    "debug.console.fontFamily": "PragmataPro Liga",
+    "editor.lineHeight": 18,
+    "workbench.colorTheme": "Gruvbox Dark (Medium)",
+    "C_Cpp.default.includePath": ["C:\\Users\\paul.volavsek\\scoop\\apps\\gcc\\current\\include\\"],
+    "C_Cpp.clang_format_style": " {BasedOnStyle: LLVM, UseTab: Never, IndentWidth: 4, TabWidth: 4, BreakBeforeBraces: Attach, AllowShortIfStatementsOnASingleLine: false, IndentCaseLabels: true, ColumnLimit: 0 }",
+    "zenMode.centerLayout": false
 }
