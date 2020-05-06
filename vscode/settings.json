@@ -83,8 +83,38 @@
     "python.dataScience.askForKernelRestart": false,
     "debug.console.fontFamily": "PragmataPro Liga",
     "editor.lineHeight": 18,
-    "workbench.colorTheme": "Gruvbox Dark (Medium)",
+    "workbench.colorTheme": "Gruvbox Material Dark",
     "C_Cpp.default.includePath": ["C:\\Users\\paul.volavsek\\scoop\\apps\\gcc\\current\\include\\"],
     "C_Cpp.clang_format_style": " {BasedOnStyle: LLVM, UseTab: Never, IndentWidth: 4, TabWidth: 4, BreakBeforeBraces: Attach, AllowShortIfStatementsOnASingleLine: false, IndentCaseLabels: true, ColumnLimit: 0 }",
-    "zenMode.centerLayout": false
+    "zenMode.centerLayout": false,
+    "vscode-neovim.neovimPath": "C:\\Users\\paul.volavsek\\scoop\\apps\\neovim\\current\\bin\\nvim.exe",
+    "spellright.language": [
+        "de"
+    ],
+    "spellright.documentTypes": [
+        "markdown",
+        "latex",
+        "plaintext"
+    ],
+    "azureFunctions.showCoreToolsWarning": false,
+    "timeline.showView": true,
+    "bracket-pair-colorizer-2.colors": [
+        "#7c6f64",
+        "#a89984",
+        "#d5c4a1",
+        "#8ec07c",
+        "#83a598",
+        "#d3869b",
+        "#fb4934",
+        "#fe8019",
+        "#fabd2f",
+        "#b8bb26"
+    ],
+    "gruvboxMaterial.italicKeywords": true,
+    "gruvboxConcoctis.useBoldFont": true,
+    "gruvboxConcoctis.useOriginalPalette": true,
+    "workbench.preferredDarkColorTheme": "Gruvbox Minor Dark Medium",
+    "workbench.preferredLightColorTheme": "Gruvbox Minor Light Medium",
+    "gruvboxMaterial.darkPalette": "original",
+    "gruvboxMaterial.darkWorkbench": "flat",
 }
