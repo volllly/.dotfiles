@@ -1,10 +1,19 @@
-installs:
-  cmd: scoop install pwsh
-  depends: scoop
-links:
-  Profile.ps1: 
-    - ~/Documents/WindowsPowerShell/Profile.ps1
-    - ~/Documents/PowerShell/Profile.ps1
-  powershell.config.json: 
-    - ~/Documents/WindowsPowershell/powershell.config.json
-    - ~/Documents/Powershell/powershell.config.json
+windows:
+  links:
+    Profile.ps1: 
+      - ~/Documents/WindowsPowerShell/Profile.ps1
+      - ~/Documents/PowerShell/Profile.ps1
+    powershell.config.json: 
+      - ~/Documents/WindowsPowershell/powershell.config.json
+      - ~/Documents/Powershell/powershell.config.json
+
+darwin:
+  installs:
+    cmd: brew cask install powershell
+  updates:
+    cmd: brew cask upgrade powershell
+
+linux|darwin:
+  links:
+    Profile.ps1: ~/.config/powershell/profile.ps1.
+    powershell.config.json: ~/.config/powershell/powershell.config.json

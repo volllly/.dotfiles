@@ -1,0 +1,8 @@
+darwin:
+  installs: false
+  updates: false
+  links:
+    .zshrc: ~/.zshrc
+  depends: 
+    - starship
+    - pwsh

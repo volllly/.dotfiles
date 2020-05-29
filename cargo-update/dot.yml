@@ -1,0 +1,3 @@
+installs:
+  cmd: cargo install cargo-update
+  depends: rustup
