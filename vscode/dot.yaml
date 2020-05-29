@@ -1,5 +1,11 @@
-links:
-  keybindings.json: ~\AppData\Roaming\Code\User\keybindings.json
-  settings.json: ~\AppData\Roaming\Code\User\settings.json
-  spellright.dict: ~\AppData\Roaming\Code\User\spellright.dict
-depends: pwsh
+windows:
+  links:
+    keybindings.json: ~\AppData\Roaming\Code\User\keybindings.json
+    settings.json: ~\AppData\Roaming\Code\User\settings.json
+    spellright.dict: ~\AppData\Roaming\Code\User\spellright.dict
+  depends: pwsh
+linux|darwin:
+  links:
+    keybindings.json: ~/Library/Application Support/Code/User/keybindings.json
+    settings.json: ~/Library/Application Support/Code/User/settings.json
+    spellright.dict: ~/Library/Application Support/Code/User/spellright.dict
