@@ -1,10 +1,19 @@
-installs:
-  cmd: scoop install __name__
+windows:
+  installs:
+    cmd: scoop install __name__
+    depends:
+      - scoop
+      - extras
+  updates:
+    cmd: scoop update __name__
+    depends:
+      - scoop
+darwin:
+  installs:
+  cmd: brew install __name__
   depends:
-    - scoop
-    - extras
-updates:
-  cmd: scoop update __name__
-  depends:
-    - scoop
-    - extras
+    - brew
+  updates:
+    cmd: brew update __name__
+    depends:
+      - brew

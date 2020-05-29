@@ -1,8 +1,10 @@
-installs:
-  cmd: scoop install git
-  depends:
-    - 7zip
-    - scoop
-links: 
-  .gitignore: ~\.gitignore
-  .gitconfig: ~\.gitconfig
+windows:
+  installs:
+    cmd: scoop install git
+    depends:
+      - 7zip
+      - scoop
+global:
+  links: 
+    .gitignore: ~\.gitignore
+    .gitconfig: ~\.gitconfig
