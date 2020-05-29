@@ -9,3 +9,10 @@ linux|darwin:
     keybindings.json: ~/Library/Application Support/Code/User/keybindings.json
     settings.json: ~/Library/Application Support/Code/User/settings.json
     spellright.dict: ~/Library/Application Support/Code/User/spellright.dict
+darwin:
+  installs:
+    cmd: brew cask install visual-studio-code
+    depends: [brew]
+  updates:
+    cmd: brew cask upgrade visual-studio-code
+    depends: [brew]
