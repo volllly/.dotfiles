@@ -10,10 +10,10 @@ windows:
       - scoop
 darwin:
   installs:
-  cmd: brew install __name__
-  depends:
-    - brew
+    cmd: brew install __name__
+    depends:
+      - brew
   updates:
-    cmd: brew update __name__
+    cmd: brew upgrade __name__
     depends:
       - brew
