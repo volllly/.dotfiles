@@ -15,5 +15,5 @@ darwin:
 
 linux|darwin:
   links:
-    Profile.ps1: ~/.config/powershell/profile.ps1.
+    Profile.ps1: ~/.config/powershell/profile.ps1
     powershell.config.json: ~/.config/powershell/powershell.config.json
