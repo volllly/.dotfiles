@@ -1,0 +1,9 @@
+[credential]
+	helper = manager
+
+[user]
+	name = Paul Volavsek
+	email = paul.volavsek@gmail.com
+
+[core]
+	excludefile = ~/.gitignore
