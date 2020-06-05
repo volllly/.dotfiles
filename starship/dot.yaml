@@ -1,8 +1,6 @@
 installs:
   cmd: cargo install starship
-  depends: rustup
-updates:
-  cmd: cargo install-update startship
   depends:
-    - rustup
-    - cargo-update
+   - rustup
+   - cargo update
+updates: cargo install-update startship
