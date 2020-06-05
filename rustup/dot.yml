@@ -2,4 +2,4 @@ darwin:
   installs:
     cmd: |
       brew install rustup-init
-      rustup-init -q
+      rustup-init -q -y
