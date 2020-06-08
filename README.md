@@ -2,4 +2,4 @@
 
 My dotfiles.
 
-Managed by [dotfiler](https://volllly.github.io/dotfiler/).
+Managed by [Dotted](https://volllly.github.io/Dotted/).
