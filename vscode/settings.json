@@ -47,7 +47,10 @@
             ]
         }
     ],
-    "terminal.integrated.shell.osx": "zsh",
+    "window.zoomLevel": 0,
+    "terminal.external.windowsExec": "pwsh.exe",
+    "terminal.integrated.shell.windows": "pwsh.exe",
+    "terminal.integrated.shell.osx": "pwsh",
     "files.insertFinalNewline": true,
     "latex-workshop.latex.outDir": "./dist/",
     "es6-css-minify.genCSSmap": true,
@@ -670,8 +673,7 @@
     "powershell.promptToUpdatePowerShell": false,
     "powershell.startAutomatically": false,
     "gitmoji.outputType": "code",
-    "latex-workshop.message.error.show": false,
     "workbench.colorTheme": "Gruvbox Minor Dark Medium",
-    "rust-analyzer.inlayHints.enable": false,
     "rust-analyzer.checkOnSave.command": "clippy",
+    "rust-analyzer.inlayHints.enable": false,
 }
