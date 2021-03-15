@@ -47,9 +47,6 @@
             ]
         }
     ],
-    "window.zoomLevel": 0,
-    "terminal.external.windowsExec": "pwsh.exe",
-    "terminal.integrated.shell.windows": "pwsh.exe",
     "terminal.integrated.shell.osx": "zsh",
     "files.insertFinalNewline": true,
     "latex-workshop.latex.outDir": "./dist/",
@@ -82,7 +79,7 @@
     "python.dataScience.askForKernelRestart": false,
     "debug.console.fontFamily": "PragmataPro Liga",
     "editor.lineHeight": 18,
-    "C_Cpp.default.includePath": ["C:\\Users\\paul.volavsek\\scoop\\apps\\gcc\\current\\include\\"],
+    // "C_Cpp.default.includePath": ["C:\\Users\\paul.volavsek\\scoop\\apps\\gcc\\current\\include\\"],
     "zenMode.centerLayout": false,
     "spellright.language": [
         "de"
@@ -108,7 +105,6 @@
     ],
     "workbench.preferredDarkColorTheme": "Gruvbox Minor Dark Medium",
     "workbench.preferredLightColorTheme": "Gruvbox Minor Light Medium",
-    "workbench.colorTheme": "Gruvbox Minor Dark Medium",
     "terminal.integrated.fontSize": 15,
     "modaledit.normalCursorStyle": "block-outline",
     "modaledit.keybindings": {
@@ -673,4 +669,9 @@
     "powershell.pester.useLegacyCodeLens": false,
     "powershell.promptToUpdatePowerShell": false,
     "powershell.startAutomatically": false,
+    "gitmoji.outputType": "code",
+    "latex-workshop.message.error.show": false,
+    "workbench.colorTheme": "Gruvbox Minor Dark Medium",
+    "rust-analyzer.inlayHints.enable": false,
+    "rust-analyzer.checkOnSave.command": "clippy",
 }
