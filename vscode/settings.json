@@ -673,7 +673,8 @@
     "powershell.promptToUpdatePowerShell": false,
     "powershell.startAutomatically": false,
     "gitmoji.outputType": "code",
-    "workbench.colorTheme": "Gruvbox Minor Dark Medium",
+    "workbench.colorTheme": "Gruvbox Material Dark",
     "rust-analyzer.checkOnSave.command": "clippy",
     "rust-analyzer.inlayHints.enable": false,
+    "gruvboxMaterial.darkPalette": "original",
 }
