@@ -1,7 +1,7 @@
 windows:
   links:
-    ginit.vim: ~\AppData\Local\nvim\ginit.vim
-    init.vim: ~\AppData\Local\nvim\init.vim
+    init.lua: ~\AppData\Local\nvim\init.lua
+    lua: ~\AppData\Local\nvim\lua
   installs: 
     cmd: |-
       scoop install neovim
@@ -16,8 +16,8 @@ windows:
 
 global:
   links:
-    ginit.vim: ~/.config/nvim/init.vim
-    init.vim: ~/.config/nvim/ginit.vim
+    init.lua: ~/.config/nvim/init.lua
+    lua: ~/.config/nvim/lua
 
 darwin:
   installs:

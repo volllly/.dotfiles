@@ -47,7 +47,6 @@
             ]
         }
     ],
-    "window.zoomLevel": 0,
     "terminal.external.windowsExec": "pwsh.exe",
     "terminal.integrated.shell.windows": "pwsh.exe",
     "terminal.integrated.shell.osx": "pwsh",
@@ -677,4 +676,6 @@
     "rust-analyzer.checkOnSave.command": "clippy",
     "rust-analyzer.inlayHints.enable": false,
     "gruvboxMaterial.darkPalette": "original",
+    "azdoPullRequests.orgUrl": "https://dev.azure.com/fiskaltrust",
+    "azdoPullRequests.fileListLayout": "flat",
 }
