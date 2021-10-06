@@ -1,5 +1,0 @@
-darwin:
-  installs:
-    cmd: |
-      brew install rustup-init
-      rustup-init -q -y

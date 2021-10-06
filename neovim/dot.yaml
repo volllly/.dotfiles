@@ -2,25 +2,8 @@ windows:
   links:
     init.lua: ~\AppData\Local\nvim\init.lua
     lua: ~\AppData\Local\nvim\lua
-  installs: 
-    cmd: |-
-      scoop install neovim
-      md ~\AppData\Local\nvim\autoload -Force | Out-Null
-      $uri = 'https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-      (New-Object Net.WebClient).DownloadFile(
-        $uri,
-        $ExecutionContext.SessionState.Path.GetUnresolvedProviderPathFromPSPath(
-          "~\AppData\Local\nvim\autoload\plug.vim"
-        )
-      )
 
-global:
+linux|darwin:
   links:
     init.lua: ~/.config/nvim/init.lua
     lua: ~/.config/nvim/lua
-
-darwin:
-  installs:
-    cmd: |
-      brew install neovim
-      sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'

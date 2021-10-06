@@ -1,7 +1,0 @@
-windows:
-  installs:
-    cmd: scoop bucket add extras
-    depends: 
-      - scoop
-      - git
-  updates: false

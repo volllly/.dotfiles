@@ -2,10 +2,6 @@ windows:
   links:
     php.ini: ~\scoop\persist\php\cli\conf.d\php.ini
 
-linux|darwin:
-  installs: false
-  updates: false
-  
 global:
   links:
     php.ini: /etc/php.ini

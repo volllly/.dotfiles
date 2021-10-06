@@ -1,8 +1,0 @@
-windows:
-  installs: |-
-    if(!(Get-Command "scoop" -errorAction SilentlyContinue)) {
-      set-executionpolicy remotesigned -s currentuser 
-      iex (new-object net.webclient).downloadstring('https://get.scoop.sh')
-    }
-    scoop update
-  updates: scoop update

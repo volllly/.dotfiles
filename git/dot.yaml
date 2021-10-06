@@ -1,11 +1,4 @@
-windows:
-  installs:
-    depends:
-      - 7zip
-      - scoop
 global:
   links: 
     .gitignore: ~/.gitignore
     .gitconfig: ~/.gitconfig
-  installs: false
-  updates: false

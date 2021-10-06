@@ -7,12 +7,6 @@ windows:
       - ~/Documents/WindowsPowershell/powershell.config.json
       - ~/Documents/Powershell/powershell.config.json
 
-darwin:
-  installs:
-    cmd: brew cask install powershell
-  updates:
-    cmd: brew cask upgrade powershell
-
 linux|darwin:
   links:
     Profile.ps1: ~/.config/powershell/profile.ps1
