@@ -9,8 +9,6 @@
     "git.enableSmartCommit": true,
     "git.confirmSync": false,
     "git.autofetch": true,
-    "terminal.external.windowsExec": "pwsh.exe",
-    "files.insertFinalNewline": true,
     "html.format.indentInnerHtml": true,
     "editor.renderWhitespace": "boundary",
     "editor.renderControlCharacters": true,
@@ -18,16 +16,12 @@
     "editor.acceptSuggestionOnEnter": "smart",
     "git.autofetchPeriod": 60,
     "git.pullTags": false,
-    "editor.suggestSelection": "first",
     "debug.console.fontFamily": "PragmataPro Liga",
-    "editor.lineHeight": 18,
-    "zenMode.centerLayout": false,
     "terminal.integrated.fontSize": 15,
     "scm.defaultViewMode": "tree",
     "omnisharp.enableRoslynAnalyzers": true,
     "omnisharp.useEditorFormattingSettings": false,
     "editor.definitionLinkOpensInPeek": true,
-    "gitmoji.outputType": "code",
     "rust-analyzer.checkOnSave.command": "clippy",
     "rust-analyzer.inlayHints.enable": false,
     "gruvboxMaterial.darkPalette": "original",
@@ -63,5 +57,6 @@
     "gitProjectManager.baseProjectsFolders": [
         "~/source"
     ],
-    "csharp.semanticHighlighting.enabled": true
+    "csharp.semanticHighlighting.enabled": true,
+    "terminal.integrated.defaultProfile.windows": "PowerShell"
 }
