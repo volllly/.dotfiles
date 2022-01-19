@@ -10,9 +10,12 @@ local packer = require'packer'
 packer.startup(function()
   use 'sainnhe/gruvbox-material'
   use 'nvim-treesitter/nvim-treesitter'
-  use 'nvim-lua/completion-nvim'
+  use 'hrsh7th/nvim-cmp'
+	use 'hrsh7th/cmp-nvim-lsp'
+	use 'hrsh7th/cmp-buffer'
+	use 'ray-x/lsp_signature.nvim'
   use 'neovim/nvim-lspconfig'
-  use 'anott03/nvim-lspinstall'
+	use 'williamboman/nvim-lsp-installer'
 	use 'nvim-lua/lsp-status.nvim'
 	use {
 		'nvim-lua/telescope.nvim',
@@ -42,6 +45,7 @@ packer.startup(function()
 		}
 	}
 	use 'ggandor/lightspeed.nvim'
+	use 'tpope/vim-repeat'
 end)
 
 require'config.settings'

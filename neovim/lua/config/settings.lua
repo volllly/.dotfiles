@@ -24,3 +24,4 @@ vim.o.smarttab = true
 
 vim.o.number = true
 
+vim.o.clipboard = "unnamed"

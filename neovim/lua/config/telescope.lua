@@ -4,7 +4,7 @@ require'telescope'.setup {
   extensions = {
     project = {
       base_dirs = {
-        '~/sources',
+        '~/source',
       }
 		}
   }
