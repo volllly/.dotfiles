@@ -1,4 +1,3 @@
-global:
-  links: 
-    .gitignore: ~/.gitignore
-    .gitconfig: ~/.gitconfig
+links:
+  .gitignore: ~/.gitignore
+  .gitconfig: ~/.gitconfig

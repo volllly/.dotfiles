@@ -50,16 +50,12 @@
     "debug.allowBreakpointsEverywhere": true,
     "editor.bracketPairColorization.enabled": true,
     "texlab.server.autoDownload": true,
-    "gitProjectManager.baseProjectsFolders": [
-        "~/source"
-    ],
     "csharp.semanticHighlighting.enabled": true,
     "terminal.integrated.defaultProfile.windows": "PowerShell",
     "redhat.telemetry.enabled": false,
     "gitmoji.outputType": "code",
     "gitmoji.showEmojiCode": true,
     "workbench.colorTheme": "Gruvbox Material Dark",
-    "vscode-neovim.neovimExecutablePaths.win32": "nvim.exe",
     "modalkeys.keybindings": {
         "::doc::\n": {
             "kind": "motion",
@@ -524,6 +520,21 @@
             "detail": "clear selection and return to normal mode"
         },
         "v": "modalkeys.toggleSelection",
+        "V": [
+            {
+                "cursorMove": {
+                    "to": "wrappedLineEnd",
+                    "select": "__mode == \"visual\""
+                }
+            },
+            "modalkeys.toggleSelection",
+            {
+                "cursorMove": {
+                    "to": "wrappedLineStart",
+                    "select": "__mode == \"visual\""
+                }
+            }
+        ],
         "::doc::x": {
             "kind": "action",
             "label": "del char →",
@@ -1204,7 +1215,14 @@
             [
                 "editor.action.clipboardCopyAction",
                 "modalkeys.cancelMultipleSelections"
-            ]
+            ],
+            {
+                "cursorMove": {
+                    "to": "up",
+                    "select": false,
+                    "value": 1
+                }
+            }
         ],
         "visual::y": [
             "editor.action.clipboardCopyAction",
@@ -8340,5 +8358,11 @@
     "modalkeys.insertStatusText": "-- INSERT --",
     "modalkeys.normalStatusText": "-- __MODENAME__ --",
     "modalkeys.searchStatusText": "SEARCH",
-    "modalkeys.selectStatusText": "-- VISUAL --"
+    "modalkeys.selectStatusText": "-- VISUAL --",
+    "projectManager.any.maxDepthRecursion": 1,
+    "projectManager.git.baseFolders": [
+        "~/source"
+    ],
+    "projectManager.git.maxDepthRecursion": 1,
+    "projectManager.ignoreProjectsWithinProjects": true
 }

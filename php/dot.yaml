@@ -2,6 +2,6 @@ windows:
   links:
     php.ini: ~\scoop\persist\php\cli\conf.d\php.ini
 
-global:
+linux:
   links:
     php.ini: /etc/php.ini
