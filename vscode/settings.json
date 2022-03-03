@@ -20,16 +20,8 @@
     "omnisharp.useEditorFormattingSettings": false,
     "editor.definitionLinkOpensInPeek": true,
     "rust-analyzer.checkOnSave.command": "clippy",
-    "rust-analyzer.inlayHints.enable": false,
     "gruvboxMaterial.darkPalette": "original",
-    "gitlens.hovers.avatars": false,
-    "gitlens.views.commits.avatars": false,
-    "gitlens.views.fileHistory.avatars": false,
-    "gitlens.views.branches.avatars": false,
     "gitlens.views.remotes.avatars": false,
-    "gitlens.views.tags.avatars": false,
-    "gitlens.views.contributors.avatars": false,
-    "gitlens.views.searchAndCompare.avatars": false,
     "gitlens.blame.avatars": false,
     "workbench.editorAssociations": {
         "git-rebase-todo": "default"
@@ -8364,5 +8356,9 @@
         "~/source"
     ],
     "projectManager.git.maxDepthRecursion": 1,
-    "projectManager.ignoreProjectsWithinProjects": true
+    "projectManager.ignoreProjectsWithinProjects": true,
+    "rust-analyzer.inlayHints.enable": false,
+    "githubPullRequests.fileListLayout": "flat",
+    "gitlens.statusBar.enabled": false,
+    "gitlens.views.branches.avatars": false
 }
