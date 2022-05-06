@@ -11,7 +11,7 @@ require'telescope'.setup {
 }
 require'telescope'.load_extension'project'
 
-utils.key_mapper('n', '<C-S-p>', ':lua require"telescope".extensions.project.project{}<CR>')
+utils.key_mapper('n', '<A-p>', ':lua require"telescope".extensions.project.project{}<CR>')
 utils.key_mapper('n', '<C-;>', ':lua require"telescope.builtin".commands{}<CR>')
 utils.key_mapper('n', '<C-p>', [[:lua require'telescope.builtin'.find_files{}<CR>]])
 utils.key_mapper('n', '<leader>f.', [[:lua require'telescope.builtin'.find_files{find_command={'rg','--files','--iglob','!.git','--hidden','--no-ignore'}}<CR>]])
