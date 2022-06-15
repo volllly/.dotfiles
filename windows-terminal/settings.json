@@ -19,7 +19,7 @@
     ],
     "copyFormatting": "none",
     "copyOnSelect": false,
-    "defaultProfile": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
+    "defaultProfile": "{2b372ca1-1ee2-403d-a839-6d63077ad871}",
     "profiles": 
     {
         "defaults": 
@@ -30,7 +30,8 @@
             {
                 "face": "PragmataPro Liga"
             },
-            "padding": "8"
+            "padding": "8",
+            "startingDirectory": "%USERPROFILE%"
         },
         "list": 
         [
@@ -86,16 +87,10 @@
                 "source": "Windows.Terminal.VisualStudio"
             },
             {
-                "guid": "{8786f242-7247-5637-9515-534ed3f0c563}",
+                "guid": "{16208362-94fc-5b1f-a491-5b2624d5ab56}",
                 "hidden": true,
-                "name": "Developer Command Prompt for VS 2019",
-                "source": "Windows.Terminal.VisualStudio"
-            },
-            {
-                "guid": "{6b6ecd66-cbf9-5346-af0e-be428ec1c4af}",
-                "hidden": true,
-                "name": "Developer PowerShell for VS 2019",
-                "source": "Windows.Terminal.VisualStudio"
+                "name": "Visual Studio Debug Console",
+                "source": "VSDebugConsole"
             }
         ]
     },

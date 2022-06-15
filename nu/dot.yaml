@@ -1,3 +1,4 @@
 windows:
   links:
     config.nu: ~/AppData/Roaming/nushell/config.nu
+    env.nu: ~/AppData/Roaming/nushell/env.nu
