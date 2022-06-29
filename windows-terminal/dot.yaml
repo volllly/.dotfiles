@@ -1,4 +1,13 @@
+global:
+  installs: false
+
 windows:
   links:
     settings.json:
       - ~/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json
+
+  depends:
+    - nu
+    - pwsh
+
+  installs: winget install Microsoft.WindowsTerminal -h

@@ -1,2 +1,6 @@
 links:
   starship.toml: ~/.config/starship.toml
+
+installs:
+  cmd: cargo install starship
+  depends: [ rust ]

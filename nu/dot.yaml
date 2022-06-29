@@ -2,3 +2,7 @@ windows:
   links:
     config.nu: ~/AppData/Roaming/nushell/config.nu
     env.nu: ~/AppData/Roaming/nushell/env.nu
+
+installs:
+  cmd: cargo install nu
+  depends: [ rust ]

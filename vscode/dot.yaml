@@ -4,11 +4,19 @@ windows:
     settings.json: ~\AppData\Roaming\Code\User\settings.json
     spellright.dict: ~\AppData\Roaming\Code\User\spellright.dict
 
+  depends:
+    - pwsh
+    - git
+
+  installs: winget install Microsoft.VisualStudioCode -h
+
 linux:
   links:
     keybindings.json: ~/.config/Code/User/keybindings.json
     settings.json: ~/.config/Code/User/settings.json
     spellright.dict: ~/.config/Code/User/spellright.dict
+
+  installs: false
 
 darwin:
   links:

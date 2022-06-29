@@ -5,3 +5,5 @@ windows:
 linux:
   links:
     php.ini: /etc/php.ini
+
+  installs: false
