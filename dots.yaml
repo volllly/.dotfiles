@@ -1,2 +1,2 @@
-global:
+linux:
   installs: apt install {{ name }}
