@@ -75,33 +75,21 @@
                 "source": "Windows.Terminal.Azure"
             },
             {
-                "guid": "{ba2c1487-c509-5dde-8b68-6251dc084c17}",
-                "hidden": true,
-                "name": "Developer Command Prompt for VS 2022",
-                "source": "Windows.Terminal.VisualStudio"
-            },
-            {
-                "guid": "{2e40a3cd-dccc-5f36-b9b0-d469732e41e1}",
-                "hidden": false,
-                "name": "Developer PowerShell for VS 2022",
-                "source": "Windows.Terminal.VisualStudio"
-            },
-            {
                 "guid": "{16208362-94fc-5b1f-a491-5b2624d5ab56}",
                 "hidden": true,
                 "name": "Visual Studio Debug Console",
                 "source": "VSDebugConsole"
             },
             {
-                "guid": "{60a6d68b-0a19-5367-a4f4-a0bc1940d291}",
-                "hidden": true,
-                "name": "Developer Command Prompt for VS 2019",
+                "guid": "{7ab0c467-e6b2-5c29-9da3-ae8c5b36f049}",
+                "hidden": false,
+                "name": "Developer Command Prompt for VS 2022",
                 "source": "Windows.Terminal.VisualStudio"
             },
             {
-                "guid": "{55e25d54-293b-567f-bf1f-c2e0cfcd1b36}",
-                "hidden": true,
-                "name": "Developer PowerShell for VS 2019",
+                "guid": "{9950ff50-884d-5f0e-af06-ba7c39097a47}",
+                "hidden": false,
+                "name": "Developer PowerShell for VS 2022",
                 "source": "Windows.Terminal.VisualStudio"
             }
         ]

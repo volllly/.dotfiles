@@ -4,4 +4,4 @@ global:
     .gitconfig: ~/.gitconfig
 
 windows:
-  installs: winget install Git.Git -h
+  installs: winget install Git.Git

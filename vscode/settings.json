@@ -21,8 +21,6 @@
     "editor.definitionLinkOpensInPeek": true,
     "rust-analyzer.checkOnSave.command": "clippy",
     "gruvboxMaterial.darkPalette": "original",
-    "gitlens.views.remotes.avatars": false,
-    "gitlens.blame.avatars": false,
     "workbench.editorAssociations": {
         "git-rebase-todo": "default"
     },
@@ -47,7 +45,6 @@
     "redhat.telemetry.enabled": false,
     "gitmoji.outputType": "code",
     "gitmoji.showEmojiCode": true,
-    "workbench.colorTheme": "Gruvbox Material Dark",
     "modalkeys.keybindings": {
         "::doc::\n": {
             "kind": "motion",
@@ -5847,15 +5844,21 @@
     ],
     "projectManager.git.maxDepthRecursion": 1,
     "projectManager.ignoreProjectsWithinProjects": true,
-    "rust-analyzer.inlayHints.enable": false,
     "githubPullRequests.fileListLayout": "tree",
     "gitlens.statusBar.enabled": false,
     "gitlens.views.branches.avatars": false,
     "terminal.integrated.fontSize": 15,
-    "terminal.integrated.shellIntegration.enabled": true,
     "diffEditor.ignoreTrimWhitespace": false,
     "rust-analyzer.inlayHints.chainingHints.enable": false,
     "rust-analyzer.inlayHints.parameterHints.enable": false,
     "rust-analyzer.inlayHints.typeHints.enable": false,
-    "githubPullRequests.createOnPublishBranch": "never"
+    "githubPullRequests.createOnPublishBranch": "never",
+    "editor.formatOnSave": true,
+    "window.commandCenter": true,
+    "workbench.layoutControl.enabled": false,
+    "window.menuBarVisibility": "toggle",
+    "githubPullRequests.pullBranch": "never",
+    "codetour.showMarkers": true,
+    "workbench.colorTheme": "Gruvbox Material Dark",
+    "workbench.iconTheme": "Monokai Pro (Filter Ristretto) Icons"
 }
