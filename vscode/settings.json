@@ -5848,7 +5848,6 @@
     "gitlens.statusBar.enabled": false,
     "gitlens.views.branches.avatars": false,
     "terminal.integrated.fontSize": 15,
-    "diffEditor.ignoreTrimWhitespace": false,
     "rust-analyzer.inlayHints.chainingHints.enable": false,
     "rust-analyzer.inlayHints.parameterHints.enable": false,
     "rust-analyzer.inlayHints.typeHints.enable": false,
@@ -5860,5 +5859,9 @@
     "githubPullRequests.pullBranch": "never",
     "codetour.showMarkers": true,
     "workbench.colorTheme": "Gruvbox Material Dark",
-    "workbench.iconTheme": "Monokai Pro (Filter Ristretto) Icons"
+    "workbench.list.smoothScrolling": true,
+    "editor.cursorSmoothCaretAnimation": true,
+    "editor.smoothScrolling": true,
+    "terminal.integrated.smoothScrolling": true,
+    "diffEditor.ignoreTrimWhitespace": false,
 }
