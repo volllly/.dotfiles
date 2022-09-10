@@ -2,5 +2,6 @@ source ~/.cache/starship/init.nu
 source ~/.cache/zoxide/init.nu
 
 let-env config = {
-    show_banner: false
+    show_banner: false,
+    completion_algorithm: "fuzzy"
 }

@@ -5864,4 +5864,7 @@
     "editor.smoothScrolling": true,
     "terminal.integrated.smoothScrolling": true,
     "diffEditor.ignoreTrimWhitespace": false,
+    "[markdown]": {
+        "editor.wordWrap": "off"
+    },
 }
