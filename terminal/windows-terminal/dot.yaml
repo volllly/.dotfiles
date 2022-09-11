@@ -10,4 +10,4 @@ windows:
     - nu
     - pwsh
 
-  installs: winget install Microsoft.WindowsTerminal -h
+  installs: winget install Microsoft.WindowsTerminal

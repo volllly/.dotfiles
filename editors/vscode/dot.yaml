@@ -5,8 +5,8 @@ windows:
     spellright.dict: ~\AppData\Roaming\Code\User\spellright.dict
 
   depends:
-    - pwsh
-    - git
+    - ../terminal/pwsh
+    - ../tools/git
 
   installs: winget install Microsoft.VisualStudioCode
 

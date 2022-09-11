@@ -1,0 +1,20 @@
+[
+  {
+    "key": "escape",
+    "command": "modalkeys.enterNormal",
+    "when": "editorTextFocus && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible && modalkeys.mode != 'normal'"
+  },
+  {
+    "key": "escape",
+    "command": "-modalkeys.enterNormal",
+    "when": "editorTextFocus && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible"
+  },
+  {
+    "key": "ctrl+alt+p",
+    "command": "projectManager.listProjects"
+  },
+  {
+    "key": "shift+alt+p",
+    "command": "-projectManager.listProjects"
+  },
+]

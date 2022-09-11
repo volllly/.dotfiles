@@ -3,4 +3,4 @@ links:
 
 installs:
   cmd: cargo install starship
-  depends: [ rust ]
+  depends: [../dev/rust]

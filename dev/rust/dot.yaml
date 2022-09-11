@@ -1,0 +1,7 @@
+windows:
+  installs:
+    cmd: scoop install rustup
+    depends: [../tools/scoop]
+
+linux|darwin:
+  installs: curl https://sh.rustup.rs -sSf | sh -s -- -y
