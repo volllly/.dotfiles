@@ -78,7 +78,6 @@
         "editor.defaultFormatter": "redhat.vscode-yaml"
     },
     "diffEditor.ignoreTrimWhitespace": false,
-    "diffEditor.renderSideBySide": false,
     "plantuml.render": "PlantUMLServer",
     "plantuml.server": "plantuml.com/plantuml",
 }

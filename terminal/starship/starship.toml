@@ -4,3 +4,6 @@ success_symbol = "[>](bold green)"
 [cmd_duration]
 show_notifications = true
 min_time_to_notify = 60_000
+
+[os]
+disabled = false
