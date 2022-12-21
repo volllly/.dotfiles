@@ -41,7 +41,6 @@
     "editor.bracketPairColorization.enabled": true,
     "texlab.server.autoDownload": true,
     "csharp.semanticHighlighting.enabled": true,
-    "terminal.integrated.defaultProfile.windows": "PowerShell",
     "redhat.telemetry.enabled": false,
     "gitmoji.outputType": "code",
     "gitmoji.showEmojiCode": true,
@@ -61,8 +60,6 @@
     "githubPullRequests.createOnPublishBranch": "never",
     "editor.formatOnSave": true,
     "window.commandCenter": true,
-    "workbench.layoutControl.enabled": false,
-    "window.menuBarVisibility": "toggle",
     "githubPullRequests.pullBranch": "never",
     "codetour.showMarkers": true,
     "workbench.colorTheme": "Gruvbox Material Dark",
@@ -80,4 +77,28 @@
     "diffEditor.ignoreTrimWhitespace": false,
     "plantuml.render": "PlantUMLServer",
     "plantuml.server": "plantuml.com/plantuml",
+    "terminal.integrated.drawBoldTextInBrightColors": false,
+    "terminal.external.windowsExec": "wt.exe",
+    "terminal.integrated.profiles.windows": {
+        "nu": {
+            "path": "nu",
+            "icon": "chevron-right"
+        },
+        "PowerShell": {
+            "source": "PowerShell",
+            "icon": "terminal-powershell"
+        },
+        "Command Prompt": {
+            "path": [
+                "${env:windir}\\Sysnative\\cmd.exe",
+                "${env:windir}\\System32\\cmd.exe"
+            ],
+            "args": [],
+            "icon": "terminal-cmd"
+        },
+        "Git Bash": {
+            "source": "Git Bash"
+        }
+    },
+    "window.menuBarVisibility": "compact",
 }

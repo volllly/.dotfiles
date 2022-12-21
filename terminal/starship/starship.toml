@@ -1,5 +1,10 @@
 [character]
 success_symbol = "[>](bold green)"
+error_symbol = "[>](bold red)"
+vimcmd_symbol = "[<](bold purple)"
+vimcmd_replace_one_symbol = "[<](bold purple)"
+vimcmd_replace_symbol = "[<](bold purple)"
+vimcmd_visual_symbol = "[<](bold yellow)"
 
 [cmd_duration]
 show_notifications = true
@@ -7,3 +12,6 @@ min_time_to_notify = 60_000
 
 [os]
 disabled = false
+
+[os.symbols]
+Windows = ""
