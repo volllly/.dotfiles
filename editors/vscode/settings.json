@@ -19,7 +19,6 @@
     "omnisharp.enableRoslynAnalyzers": true,
     "omnisharp.useEditorFormattingSettings": false,
     "editor.definitionLinkOpensInPeek": true,
-    "rust-analyzer.checkOnSave.command": "clippy",
     "gruvboxMaterial.darkPalette": "original",
     "workbench.editorAssociations": {
         "git-rebase-todo": "default"
@@ -75,14 +74,13 @@
         "editor.defaultFormatter": "redhat.vscode-yaml"
     },
     "diffEditor.ignoreTrimWhitespace": false,
-    "plantuml.render": "PlantUMLServer",
-    "plantuml.server": "plantuml.com/plantuml",
+    "terminal.integrated.defaultProfile.windows": "nu",
     "terminal.integrated.drawBoldTextInBrightColors": false,
     "terminal.external.windowsExec": "wt.exe",
     "terminal.integrated.profiles.windows": {
         "nu": {
             "path": "nu",
-            "icon": "chevron-right"
+            "icon": "chevron-right",
         },
         "PowerShell": {
             "source": "PowerShell",
@@ -96,9 +94,222 @@
             "args": [],
             "icon": "terminal-cmd"
         },
-        "Git Bash": {
-            "source": "Git Bash"
-        }
     },
     "window.menuBarVisibility": "compact",
+    "vim.cursorStylePerMode.insert": "line",
+    "vim.cursorStylePerMode.normal": "block",
+    "vim.cursorStylePerMode.visual": "underline",
+    "vim.cursorStylePerMode.visualblock": "underline",
+    "vim.cursorStylePerMode.visualline": "underline",
+    "vim.highlightedyank.enable": true,
+    "vim.leader": "<Space>",
+    "vim.sneak": true,
+    "vim.useSystemClipboard": true,
+    "vim.handleKeys": {
+        "<C-c>": false,
+        "<C-f>": false
+    },
+    "vim.sneakReplacesF": true,
+    "vim.easymotion": true,
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "<space>"
+            ],
+            "commands": [
+                "vspacecode.space"
+            ]
+        },
+        {
+            "before": [
+                ","
+            ],
+            "commands": [
+                "vspacecode.space",
+                {
+                    "command": "whichkey.triggerKey",
+                    "args": "m"
+                }
+            ]
+        }
+    ],
+    "vim.visualModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "<space>"
+            ],
+            "commands": [
+                "vspacecode.space"
+            ]
+        },
+        {
+            "before": [
+                ","
+            ],
+            "commands": [
+                "vspacecode.space",
+                {
+                    "command": "whichkey.triggerKey",
+                    "args": "m"
+                }
+            ]
+        }
+    ],
+    "vspacecode.bindingOverrides": [
+        {
+            "keys": "p.p",
+            "name": "+Switch project",
+            "type": "command",
+            "icon": "project",
+            "command": "projectManager.listProjects",
+        },
+        {
+            "keys": "p.l",
+            "position": -1,
+        },
+        {
+            "keys": "f.p",
+            "name": "Fuzzy finder",
+            "type": "command",
+            "icon": "search",
+            "command": "workbench.action.quickOpen"
+        },
+        {
+            "keys": "!",
+            "name": "Close Terminal",
+            "type": "command",
+            "icon": "terminal",
+            "command": "workbench.action.terminal.toggleTerminal",
+            "when": "terminalFocus"
+        },
+        {
+            "keys": "b.o",
+            "name": "Keep Open",
+            "type": "command",
+            "icon": "lock-small",
+            "command": "workbench.action.keepEditor",
+        },
+        {
+            "keys": "g.b",
+            "name": "+Branches",
+            "type": "command",
+            "icon": "git-branch",
+            "command": "magit.branching"
+        },
+        {
+            "keys": "g.s",
+            "name": "+Sync",
+            "type": "bindings",
+            "icon": "git-branch",
+            "bindings": [
+                {
+                    "key": "p",
+                    "name": "Push",
+                    "type": "command",
+                    "icon": "repo-push",
+                    "command": "magit.pushing"
+                },
+                {
+                    "key": "u",
+                    "name": "Pull",
+                    "type": "command",
+                    "icon": "repo-pull",
+                    "command": "magit.pulling"
+                },
+            ]
+        },
+        {
+            "keys": "g.c",
+            "name": "+Commits",
+            "type": "commands",
+            "icon": "git-commit",
+            "command": "magit.commit"
+        },
+        {
+            "keys": "g.i",
+            "position": -1,
+        },
+        {
+            "keys": "g.S",
+            "name": "+Stashes",
+            "type": "command",
+            "icon": "list-flat",
+            "command": "magit.stashing"
+        },
+        {
+            "keys": "g.U",
+            "position": -1,
+        },
+        {
+            "keys": "g.m",
+            "position": -1,
+        },
+        {
+            "keys": "B",
+            "name": "+Bookmarks",
+            "type": "bindings",
+            "icon": "bookmark",
+            "bindings": [
+                {
+                    "key": "b",
+                    "name": "Toggle",
+                    "type": "command",
+                    "icon": "bookmark",
+                    "command": "bookmarks.toggle"
+                },
+                {
+                    "key": "B",
+                    "name": "Toggle Labled",
+                    "type": "command",
+                    "icon": "bookmark",
+                    "command": "bookmarks.toggleLabeled"
+                },
+                {
+                    "key": "l",
+                    "name": "List",
+                    "type": "command",
+                    "icon": "list-flat",
+                    "command": "bookmarks.list"
+                },
+                {
+                    "key": "L",
+                    "name": "List All",
+                    "type": "command",
+                    "icon": "list-tree",
+                    "command": "bookmarks.listFromAllFiles"
+                },
+                {
+                    "key": "n",
+                    "name": "Next",
+                    "type": "command",
+                    "icon": "goto-next-location",
+                    "command": "bookmarks.jumpToNext"
+                },
+                {
+                    "key": "p",
+                    "name": "Previous",
+                    "type": "command",
+                    "icon": "goto-previous-location",
+                    "command": "bookmarks.jumpToPrevious"
+                },
+                {
+                    "key": "c",
+                    "name": "Clear",
+                    "type": "command",
+                    "icon": "notifications-clear",
+                    "command": "bookmarks.clear"
+                },
+                {
+                    "key": "C",
+                    "name": "Clear All",
+                    "type": "command",
+                    "icon": "clear-all",
+                    "command": "bookmarks.clearFromAllFiles"
+                },
+            ]
+        }
+    ],
+    "whichkey.sortOrder": "nonNumberFirst",
+    "editor.accessibilitySupport": "off",
+    "rust-analyzer.check.command": "clippy",
 }

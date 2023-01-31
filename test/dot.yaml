@@ -1,3 +1,0 @@
-installs: {{ #if (eq os "windows") ~}}
-      '"$(Split-Path $PROFILE.CurrentUserCurrentHost)/powershell.config.json"'
-    {{~ /if}}
