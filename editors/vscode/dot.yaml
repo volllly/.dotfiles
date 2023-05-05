@@ -3,6 +3,7 @@ windows:
     keybindings.json: ~\AppData\Roaming\Code\User\keybindings.json
     settings.json: ~\AppData\Roaming\Code\User\settings.json
     spellright.dict: ~\AppData\Roaming\Code\User\spellright.dict
+    snippets: ~\AppData\Roaming\Code\User\snippets
 
   depends:
     - ../terminal/pwsh
@@ -15,6 +16,7 @@ linux:
     keybindings.json: ~/.config/Code/User/keybindings.json
     settings.json: ~/.config/Code/User/settings.json
     spellright.dict: ~/.config/Code/User/spellright.dict
+    snippets: ~/.config/Code/User/snippets
 
   installs: false
 
@@ -23,3 +25,26 @@ darwin:
     keybindings.json: ~/Library/Application Support/Code/User/keybindings.json
     settings.json: ~/Library/Application Support/Code/User/settings.json
     spellright.dict: ~/Library/Application Support/Code/User/spellright.dict
+    snippets: ~/Library/Application Support/Code/User/snippets
+
+hooks:
+  sync:
+    commit:
+      pre: code --list-extensions > extensions.txt
+
+  link:
+    post: |
+      $current = code --list-extensions
+      $dotfiles = Get-Content extensions.txt
+
+      $current | % {
+        if($($dotfiles -match $_) -eq $null) {
+          code --uninstall-extension $_
+        }
+      }
+
+      $dotfiles | % {
+        if($($current -match $_) -eq $null) {
+          code --install-extension $_
+        }
+      }

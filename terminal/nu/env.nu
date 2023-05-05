@@ -1,11 +1,11 @@
 let-env ENV_CONVERSIONS = {
   'PATH': {
     from_string: { |s| $s | split row (char esep) }
-    to_string: { |v| $v | path expand | str collect (char esep) }
+    to_string: { |v| $v | path expand | str join (char esep) }
   }
   'Path': {
     from_string: { |s| $s | split row (char esep) }
-    to_string: { |v| $v | path expand | str collect (char esep) }
+    to_string: { |v| $v | path expand | str join (char esep) }
   }
 }
 
@@ -18,7 +18,4 @@ let-env NU_PLUGIN_DIRS = [
 ]
 
 mkdir ~/.cache/starship
-starship init nu | str replace --string '&&' 'or' | save ~/.cache/starship/init.nu --force
-
-mkdir ~/.cache/zoxide
-zoxide init nushell --hook prompt | save ~/.cache/zoxide/init.nu --force
+starship init nu | save ~/.cache/starship/init.nu --force

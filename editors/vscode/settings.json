@@ -63,7 +63,7 @@
     "codetour.showMarkers": true,
     "workbench.colorTheme": "Gruvbox Material Dark",
     "workbench.list.smoothScrolling": true,
-    "editor.cursorSmoothCaretAnimation": true,
+    "editor.cursorSmoothCaretAnimation": "on",
     "editor.smoothScrolling": true,
     "terminal.integrated.smoothScrolling": true,
     "[markdown]": {
@@ -73,7 +73,6 @@
     "[yaml]": {
         "editor.defaultFormatter": "redhat.vscode-yaml"
     },
-    "diffEditor.ignoreTrimWhitespace": false,
     "terminal.integrated.defaultProfile.windows": "nu",
     "terminal.integrated.drawBoldTextInBrightColors": false,
     "terminal.external.windowsExec": "wt.exe",
@@ -166,6 +165,20 @@
         {
             "keys": "p.l",
             "position": -1,
+        },
+        {
+            "keys": "p.r",
+            "name": "Refresh projects",
+            "type": "command",
+            "icon": "refresh",
+            "command": "projectManager.refreshProjects",
+        },
+        {
+            "keys": "p.l",
+            "name": "+Recent projects",
+            "type": "command",
+            "icon": "project",
+            "command": "workbench.action.openRecent",
         },
         {
             "keys": "f.p",
@@ -312,4 +325,9 @@
     "whichkey.sortOrder": "nonNumberFirst",
     "editor.accessibilitySupport": "off",
     "rust-analyzer.check.command": "clippy",
+    "javascript.updateImportsOnFileMove.enabled": "never",
+    "diffEditor.ignoreTrimWhitespace": false,
+    "[python]": {
+        "editor.formatOnType": true
+    },
 }

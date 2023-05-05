@@ -1,5 +1,4 @@
 source ~/.cache/starship/init.nu
-source ~/.cache/zoxide/init.nu
 
 let-env config = {
     show_banner: false,
@@ -7,3 +6,5 @@ let-env config = {
         algorithm: "fuzzy"
     }
 }
+
+let-env CONDA_NO_PROMPT = true

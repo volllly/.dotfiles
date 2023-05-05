@@ -1,0 +1,34 @@
+{
+	"Derive": {
+		"prefix": "derive",
+		"body": "#[derive($1)]"
+	},
+	"Attribute": {
+		"prefix": "attribute",
+		"body": "#[$1]"
+	},
+	"Method": {
+		"prefix": "method",
+		"body": ".$1($2)"
+	},
+	"Method with closure": {
+		"prefix": "method-closure",
+		"body": ".$1(|$2| $3)"
+	},
+	"pipe": {
+		"prefix": "pipe",
+		"body": ".pipe($1)"
+	},
+	"pipe Ok": {
+		"prefix": "pipe-ok",
+		"body": ".pipe(Ok)"
+	},
+	"pipe Some": {
+		"prefix": "pipe-some",
+		"body": ".pipe(Some)"
+	},
+	"pipe Error": {
+		"prefix": "pipe-err",
+		"body": ".pipe(Err)"
+	}
+}
