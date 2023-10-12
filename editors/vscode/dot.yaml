@@ -27,24 +27,24 @@ darwin:
     spellright.dict: ~/Library/Application Support/Code/User/spellright.dict
     snippets: ~/Library/Application Support/Code/User/snippets
 
-hooks:
-  sync:
-    commit:
-      pre: code --list-extensions > extensions.txt
+# hooks:
+#   sync:
+#     commit:
+#       pre: code --list-extensions > extensions.txt
 
-  link:
-    post: |
-      $current = code --list-extensions
-      $dotfiles = Get-Content extensions.txt
+#   link:
+#     post: |
+#       $current = code --list-extensions
+#       $dotfiles = Get-Content extensions.txt
 
-      $current | % {
-        if($($dotfiles -match $_) -eq $null) {
-          code --uninstall-extension $_
-        }
-      }
+#       $current | % {
+#         if($($dotfiles -match $_) -eq $null) {
+#           code --uninstall-extension $_
+#         }
+#       }
 
-      $dotfiles | % {
-        if($($current -match $_) -eq $null) {
-          code --install-extension $_
-        }
-      }
+#       $dotfiles | % {
+#         if($($current -match $_) -eq $null) {
+#           code --install-extension $_
+#         }
+#       }

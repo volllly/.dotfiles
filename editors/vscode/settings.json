@@ -23,19 +23,6 @@
     "workbench.editorAssociations": {
         "git-rebase-todo": "default"
     },
-    "gitlens.menus": {
-        "editor": false,
-        "editorGroup": false,
-        "editorTab": false,
-        "explorer": false,
-        "scm": {
-            "authors": true
-        },
-        "scmGroupInline": false,
-        "scmGroup": false,
-        "scmItem": false
-    },
-    "gitlens.mode.statusBar.enabled": false,
     "debug.allowBreakpointsEverywhere": true,
     "editor.bracketPairColorization.enabled": true,
     "texlab.server.autoDownload": true,
@@ -50,8 +37,6 @@
     "projectManager.git.maxDepthRecursion": 1,
     "projectManager.ignoreProjectsWithinProjects": true,
     "githubPullRequests.fileListLayout": "tree",
-    "gitlens.statusBar.enabled": false,
-    "gitlens.views.branches.avatars": false,
     "terminal.integrated.fontSize": 15,
     "rust-analyzer.inlayHints.chainingHints.enable": false,
     "rust-analyzer.inlayHints.parameterHints.enable": false,
@@ -79,7 +64,7 @@
     "terminal.integrated.profiles.windows": {
         "nu": {
             "path": "nu",
-            "icon": "chevron-right",
+            "icon": "chevron-right"
         },
         "PowerShell": {
             "source": "PowerShell",
@@ -92,7 +77,7 @@
             ],
             "args": [],
             "icon": "terminal-cmd"
-        },
+        }
     },
     "window.menuBarVisibility": "compact",
     "vim.cursorStylePerMode.insert": "line",
@@ -156,6 +141,20 @@
     ],
     "vspacecode.bindingOverrides": [
         {
+            "keys": "j.l",
+            "name": "Jump to line",
+            "type": "command",
+            "icon": "list-flat",
+            "command": "workbench.action.gotoLine"
+        },
+        {
+            "keys": "f.O",
+            "name": "Open folder",
+            "type": "command",
+            "icon": "folder-opened",
+            "command": "workbench.action.files.openFolder"
+        },
+        {
             "keys": "p.p",
             "name": "+Switch project",
             "type": "command",
@@ -179,6 +178,13 @@
             "type": "command",
             "icon": "project",
             "command": "workbench.action.openRecent",
+        },
+        {
+            "keys": "T.B",
+            "name": "Toggle secondary sidebar visibility",
+            "type": "command",
+            "icon": "split-horizontal",
+            "command": "workbench.action.toggleAuxiliaryBar",
         },
         {
             "keys": "f.p",
@@ -320,14 +326,96 @@
                     "command": "bookmarks.clearFromAllFiles"
                 },
             ]
+        },
+        {
+            "keys": "\\",
+            "name": "+Copilot",
+            "type": "bindings",
+            "icon": "github",
+            "bindings": [
+                {
+                    "key": "\\",
+                    "name": "Trigger",
+                    "type": "command",
+                    "icon": "lightbulb-autofix",
+                    "command": "github.copilot.interactiveEditor.generate"
+                },
+                {
+                    "key": "c",
+                    "name": "Chat",
+                    "type": "command",
+                    "icon": "comment-discussion",
+                    "command": "workbench.panel.chat.view.copilot.focus"
+                },
+                {
+                    "key": "q",
+                    "name": "Question",
+                    "type": "command",
+                    "icon": "question",
+                    "command": "chat.action.askQuickQuestion",
+                },
+                {
+                    "key": "e",
+                    "name": "Explain",
+                    "type": "command",
+                    "icon": "lightbulb",
+                    "command": "github.copilot.interactiveEditor.explain"
+                },
+                {
+                    "key": "g",
+                    "name": "Enable/Disable",
+                    "type": "command",
+                    "icon": "circle-large-outline",
+                    "command": "github.copilot.toggleCopilot",
+                },
+                {
+                    "key": "C",
+                    "name": "Clear Chat",
+                    "type": "command",
+                    "icon": "clear-all",
+                    "command": "workbench.action.chat.copilot.clear"
+                }
+            ]
         }
     ],
     "whichkey.sortOrder": "nonNumberFirst",
     "editor.accessibilitySupport": "off",
     "rust-analyzer.check.command": "clippy",
     "javascript.updateImportsOnFileMove.enabled": "never",
-    "diffEditor.ignoreTrimWhitespace": false,
     "[python]": {
         "editor.formatOnType": true
     },
+    "extempore.sharedir": "c:\\Users\\paul.volavsek\\Desktop\\sp\\extempore",
+    "terminal.integrated.automationProfile.windows": {
+        "path": "cmd",
+        "args": []
+    },
+    "github.copilot.enable": {
+        "*": true,
+        "plaintext": false,
+        "markdown": true,
+        "scminput": false
+    },
+    "editor.inlineSuggest.showToolbar": "always",
+    "editor.inlineSuggest.enabled": true,
+    "git.openRepositoryInParentFolders": "never",
+    "gitlens.showWelcomeOnInstall": false,
+    "gitlens.plusFeatures.enabled": false,
+    "gitlens.virtualRepositories.enabled": false,
+    "gitlens.statusBar.enabled": false,
+    "gitlens.hovers.avatars": false,
+    "gitlens.views.commits.avatars": false,
+    "gitlens.views.commitDetails.avatars": false,
+    "gitlens.views.repositories.avatars": false,
+    "gitlens.views.fileHistory.avatars": false,
+    "gitlens.views.lineHistory.avatars": false,
+    "gitlens.views.branches.avatars": false,
+    "gitlens.views.remotes.avatars": false,
+    "gitlens.views.tags.avatars": false,
+    "gitlens.views.worktrees.avatars": false,
+    "gitlens.views.contributors.avatars": false,
+    "gitlens.views.searchAndCompare.avatars": false,
+    "gitlens.blame.avatars": false,
+    "gitlens.graph.avatars": false,
+    "diffEditor.ignoreTrimWhitespace": false
 }

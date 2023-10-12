@@ -191,4 +191,9 @@
     "command": "list.focusUp",
     "when": "listFocus && !inputFocus"
   },
+  {
+    "key": "alt+.",
+    "command": "editor.action.inlineSuggest.trigger",
+    "when": "config.github.copilot.inlineSuggest.enable && editorTextFocus && !editorHasSelection && !inlineSuggestionsVisible"
+  },
 ]
