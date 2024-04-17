@@ -23,4 +23,4 @@ mkdir ~/.cache/starship
 starship init nu | save ~/.cache/starship/init.nu --force
 
 mkdir ~/.cache/atuin
-atuin init nu --disable-up-arrow --disable-ctrl-r | save ~/.cache/atuin/init.nu --force
+atuin init nu | save ~/.cache/atuin/init.nu --force

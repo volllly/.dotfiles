@@ -30,5 +30,21 @@
 	"pipe Error": {
 		"prefix": "pipe-err",
 		"body": ".pipe(Err)"
-	}
+	},
+	"into Ok": {
+		"prefix": ".ok",
+		"body": ".into_ok()"
+	},
+	"into Some": {
+		"prefix": ".some",
+		"body": ".into_some()"
+	},
+	"Debug Print": {
+		"prefix": "debug",
+		"body": "println!(\"{:?}\", $1);"
+	},
+	"inspect Print": {
+		"prefix": "inspect",
+		"body": ".inspect(|d| println!(\"{:?}\", d))"
+	},
 }

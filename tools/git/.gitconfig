@@ -4,8 +4,15 @@
 [user]
 	name = Paul Volavsek
 	email = paul.volavsek@gmail.com
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOR2hBHwIKUOofPuIxQTDNbdOtZu4sEJud1Xlpwgr7Dq
 
 [core]
 	excludefile = ~/.gitignore
 	longpaths = true
 	autocrlf = true
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	program = C:\\Users\\paul.volavsek\\AppData\\Local\\1Password\\app\\8\\op-ssh-sign.exe
+[commit]
+	gpgsign = true
