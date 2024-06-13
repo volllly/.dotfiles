@@ -16,7 +16,6 @@
     "editor.acceptSuggestionOnEnter": "smart",
     "debug.console.fontFamily": "PragmataPro Liga",
     "scm.defaultViewMode": "tree",
-    "omnisharp.enableRoslynAnalyzers": true,
     "omnisharp.useEditorFormattingSettings": false,
     "editor.definitionLinkOpensInPeek": true,
     "gruvboxMaterial.darkPalette": "original",
@@ -25,7 +24,6 @@
     },
     "debug.allowBreakpointsEverywhere": true,
     "editor.bracketPairColorization.enabled": true,
-    "texlab.server.autoDownload": true,
     "csharp.semanticHighlighting.enabled": true,
     "redhat.telemetry.enabled": false,
     "gitmoji.outputType": "code",
@@ -80,65 +78,6 @@
         }
     },
     "window.menuBarVisibility": "compact",
-    "vim.cursorStylePerMode.insert": "line",
-    "vim.cursorStylePerMode.normal": "block",
-    "vim.cursorStylePerMode.visual": "underline",
-    "vim.cursorStylePerMode.visualblock": "underline",
-    "vim.cursorStylePerMode.visualline": "underline",
-    "vim.highlightedyank.enable": true,
-    "vim.leader": "<Space>",
-    "vim.sneak": true,
-    "vim.useSystemClipboard": true,
-    "vim.handleKeys": {
-        "<C-c>": false,
-        "<C-f>": false
-    },
-    "vim.sneakReplacesF": true,
-    "vim.easymotion": true,
-    "vim.normalModeKeyBindingsNonRecursive": [
-        {
-            "before": [
-                "<space>"
-            ],
-            "commands": [
-                "vspacecode.space"
-            ]
-        },
-        {
-            "before": [
-                ","
-            ],
-            "commands": [
-                "vspacecode.space",
-                {
-                    "command": "whichkey.triggerKey",
-                    "args": "m"
-                }
-            ]
-        }
-    ],
-    "vim.visualModeKeyBindingsNonRecursive": [
-        {
-            "before": [
-                "<space>"
-            ],
-            "commands": [
-                "vspacecode.space"
-            ]
-        },
-        {
-            "before": [
-                ","
-            ],
-            "commands": [
-                "vspacecode.space",
-                {
-                    "command": "whichkey.triggerKey",
-                    "args": "m"
-                }
-            ]
-        }
-    ],
     "vspacecode.bindingOverrides": [
         {
             "keys": "j.l",
@@ -385,7 +324,6 @@
     "[python]": {
         "editor.formatOnType": true
     },
-    "extempore.sharedir": "c:\\Users\\paul.volavsek\\Desktop\\sp\\extempore",
     "terminal.integrated.automationProfile.windows": {
         "path": "cmd",
         "args": []
@@ -417,5 +355,21 @@
     "gitlens.views.searchAndCompare.avatars": false,
     "gitlens.blame.avatars": false,
     "gitlens.graph.avatars": false,
-    "diffEditor.ignoreTrimWhitespace": false
+    "diffEditor.ignoreTrimWhitespace": true,
+    "gruvboxMaterial.lightPalette": "original",
+    "cursorless.showOnStart": false,
+    "dance.modes": {
+        "normal": {
+            "cursorStyle": "block",
+            "selectionBehavior": "character"
+        },
+    },
+    "csharp.debug.justMyCode": false,
+    "github.copilot.editor.enableAutoCompletions": true,
+    "gruvboxMaterial.darkWorkbench": "high-contrast",
+    "maui.configuration.javaSdkPreferredPath": "c:\\Program Files (x86)\\Android\\openjdk\\jdk-17.0.8.101-hotspot",
+    "dart.flutterSdkPath": "C:\\Flutter\\flutter",
+    "vs-kubernetes": {
+        "vs-kubernetes.crd-code-completion": "disabled"
+    }
 }

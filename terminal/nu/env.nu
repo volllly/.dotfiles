@@ -22,5 +22,5 @@ $env.HOME = $env.HOMEPATH
 mkdir ~/.cache/starship
 starship init nu | save ~/.cache/starship/init.nu --force
 
-mkdir ~/.cache/atuin
-atuin init nu | save ~/.cache/atuin/init.nu --force
+mkdir ~/.cache/zoxide
+zoxide init --cmd cd nushell | save ~/.cache/zoxide/init.nu
