@@ -5,10 +5,6 @@
     "when": "!terminalFocus"
   },
   {
-    "key": "alt+oem_3",
-    "command": "workbench.action.focusActiveEditorGroup"
-  },
-  {
     "key": "space",
     "command": "vspacecode.space",
     "when": "editorTextFocus && dance.mode == 'normal' && !whichkeyactive"

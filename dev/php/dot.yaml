@@ -1,9 +1,9 @@
 windows:
   links:
-    php.ini: ~\scoop\persist\php\cli\conf.d\php.ini
+    custom.ini: ~\scoop\persist\php\cli\conf.d\custom.ini
 
 linux:
   links:
-    php.ini: /etc/php.ini
+    custom.ini: /etc/custom.ini
 
   installs: false

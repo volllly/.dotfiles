@@ -43,7 +43,6 @@
     "editor.formatOnSave": true,
     "window.commandCenter": true,
     "githubPullRequests.pullBranch": "never",
-    "codetour.showMarkers": true,
     "workbench.colorTheme": "Gruvbox Material Dark",
     "workbench.list.smoothScrolling": true,
     "editor.cursorSmoothCaretAnimation": "on",
@@ -209,14 +208,14 @@
             "icon": "bookmark",
             "bindings": [
                 {
-                    "key": "b",
+                    "key": "B",
                     "name": "Toggle",
                     "type": "command",
                     "icon": "bookmark",
                     "command": "bookmarks.toggle"
                 },
                 {
-                    "key": "B",
+                    "key": "b",
                     "name": "Toggle Labled",
                     "type": "command",
                     "icon": "bookmark",
@@ -274,13 +273,20 @@
             "bindings": [
                 {
                     "key": "\\",
+                    "name": "Trigger nline",
+                    "type": "command",
+                    "icon": "lightbulb",
+                    "command": "editor.action.inlineSuggest.trigger"
+                },
+                {
+                    "key": "c",
                     "name": "Trigger",
                     "type": "command",
                     "icon": "lightbulb-autofix",
                     "command": "github.copilot.interactiveEditor.generate"
                 },
                 {
-                    "key": "c",
+                    "key": "C",
                     "name": "Chat",
                     "type": "command",
                     "icon": "comment-discussion",
@@ -308,7 +314,7 @@
                     "command": "github.copilot.toggleCopilot",
                 },
                 {
-                    "key": "C",
+                    "key": "x",
                     "name": "Clear Chat",
                     "type": "command",
                     "icon": "clear-all",
@@ -337,39 +343,13 @@
     "editor.inlineSuggest.showToolbar": "always",
     "editor.inlineSuggest.enabled": true,
     "git.openRepositoryInParentFolders": "never",
-    "gitlens.showWelcomeOnInstall": false,
-    "gitlens.plusFeatures.enabled": false,
-    "gitlens.virtualRepositories.enabled": false,
-    "gitlens.statusBar.enabled": false,
-    "gitlens.hovers.avatars": false,
-    "gitlens.views.commits.avatars": false,
-    "gitlens.views.commitDetails.avatars": false,
-    "gitlens.views.repositories.avatars": false,
-    "gitlens.views.fileHistory.avatars": false,
-    "gitlens.views.lineHistory.avatars": false,
-    "gitlens.views.branches.avatars": false,
-    "gitlens.views.remotes.avatars": false,
-    "gitlens.views.tags.avatars": false,
-    "gitlens.views.worktrees.avatars": false,
-    "gitlens.views.contributors.avatars": false,
-    "gitlens.views.searchAndCompare.avatars": false,
-    "gitlens.blame.avatars": false,
-    "gitlens.graph.avatars": false,
     "diffEditor.ignoreTrimWhitespace": true,
     "gruvboxMaterial.lightPalette": "original",
-    "cursorless.showOnStart": false,
-    "dance.modes": {
-        "normal": {
-            "cursorStyle": "block",
-            "selectionBehavior": "character"
-        },
-    },
     "csharp.debug.justMyCode": false,
-    "github.copilot.editor.enableAutoCompletions": true,
+    "github.copilot.editor.enableAutoCompletions": false,
     "gruvboxMaterial.darkWorkbench": "high-contrast",
-    "maui.configuration.javaSdkPreferredPath": "c:\\Program Files (x86)\\Android\\openjdk\\jdk-17.0.8.101-hotspot",
-    "dart.flutterSdkPath": "C:\\Flutter\\flutter",
     "vs-kubernetes": {
         "vs-kubernetes.crd-code-completion": "disabled"
-    }
+    },
+    "yaml.schemaStore.enable": false,
 }

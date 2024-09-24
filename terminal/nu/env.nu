@@ -23,4 +23,4 @@ mkdir ~/.cache/starship
 starship init nu | save ~/.cache/starship/init.nu --force
 
 mkdir ~/.cache/zoxide
-zoxide init --cmd cd nushell | save ~/.cache/zoxide/init.nu
+zoxide init --cmd cd nushell | save ~/.cache/zoxide/init.nu --force
