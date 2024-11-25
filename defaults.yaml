@@ -1,2 +1,4 @@
 linux:
   installs: apt install {{ name }}
+darwin:
+  installs: brew install {{ name }}

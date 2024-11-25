@@ -1,7 +1,7 @@
 global:
   links:
     .gitignore: ~/.gitignore
-    .gitconfig: ~/.gitconfig
+  installs: false
 
 windows:
   installs: winget install Git.Git

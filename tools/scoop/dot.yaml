@@ -3,5 +3,5 @@ windows:
     Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
     irm get.scoop.sh | iex
 
-linux|darwin:
+global:
   installs: false

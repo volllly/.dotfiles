@@ -1,0 +1,3 @@
+darwin|linux:
+  links:
+    config.kdl: ~/.config/zellij/config.kdl

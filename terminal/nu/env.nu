@@ -17,7 +17,9 @@ $env.NU_PLUGIN_DIRS = [
     ($nu.config-path | path dirname | path join 'plugins')
 ]
 
-$env.HOME = $env.HOMEPATH
+if $env.HOMEPATH? != null {
+    $env.HOME = $env.HOMEPATH
+}
 
 mkdir ~/.cache/starship
 starship init nu | save ~/.cache/starship/init.nu --force
