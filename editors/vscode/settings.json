@@ -202,6 +202,13 @@
             "position": -1,
         },
         {
+            "keys": "T.C",
+            "name": "Toggle cursorless decorators",
+            "type": "command",
+            "icon": "debug-breakpoint",
+            "command": "cursorless.toggleDecorations"
+        },
+        {
             "keys": "B",
             "name": "+Bookmarks",
             "type": "bindings",
@@ -345,11 +352,26 @@
     "git.openRepositoryInParentFolders": "never",
     "diffEditor.ignoreTrimWhitespace": true,
     "gruvboxMaterial.lightPalette": "original",
-    "csharp.debug.justMyCode": false,
     "github.copilot.editor.enableAutoCompletions": false,
     "gruvboxMaterial.darkWorkbench": "high-contrast",
     "vs-kubernetes": {
         "vs-kubernetes.crd-code-completion": "disabled"
     },
     "yaml.schemaStore.enable": false,
+    "workbench.startupEditor": "none",
+    "extensions.experimental.affinity": {
+        "asvetliakov.vscode-neovim": 1
+    },
+    "cursorless.showOnStart": false,
+    "todo-tree.general.tags": [
+        "BUG",
+        "HACK",
+        "FIXME",
+        "TODO",
+        "[ ]",
+        "[x]",
+        "PROBLEM",
+        "QUESTION"
+    ],
+    "csharp.debug.justMyCode": false,
 }

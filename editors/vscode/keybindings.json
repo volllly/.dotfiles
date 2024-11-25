@@ -5,33 +5,8 @@
     "when": "!terminalFocus"
   },
   {
-    "key": "space",
-    "command": "vspacecode.space",
-    "when": "editorTextFocus && dance.mode == 'normal' && !whichkeyactive"
-  },
-  {
     "key": "shift+space",
     "command": "vspacecode.space",
     "when": "!whichkeyactive"
-  },
-  {
-    "key": "ctrl+v",
-    "command": "-dance.modes.set.temporarily.insert",
-    "when": "editorTextFocus && dance.mode == 'normal'"
-  },
-  {
-    "key": "ctrl+v",
-    "command": "-dance.modes.set.temporarily.normal",
-    "when": "editorTextFocus && dance.mode == 'insert'"
-  },
-  {
-    "key": "ctrl+f",
-    "command": "-dance.select.vertically",
-    "when": "editorTextFocus && dance.mode == 'normal'"
-  },
-  {
-    "key": "ctrl+f",
-    "command": "-dance.select.vertically",
-    "when": "editorTextFocus && dance.mode == 'insert'"
   },
 ]
