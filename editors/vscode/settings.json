@@ -1,377 +1,517 @@
 {
-    "editor.tabSize": 2,
-    "editor.fontFamily": "PragmataPro Liga",
-    "editor.fontLigatures": true,
-    "editor.fontSize": 15,
-    "debug.toolBarLocation": "docked",
-    "editor.minimap.enabled": false,
-    "explorer.confirmDragAndDrop": false,
-    "git.enableSmartCommit": true,
-    "git.confirmSync": false,
-    "git.autofetch": true,
-    "html.format.indentInnerHtml": true,
-    "editor.renderWhitespace": "boundary",
-    "editor.renderControlCharacters": true,
-    "explorer.confirmDelete": false,
-    "editor.acceptSuggestionOnEnter": "smart",
-    "debug.console.fontFamily": "PragmataPro Liga",
-    "scm.defaultViewMode": "tree",
-    "omnisharp.useEditorFormattingSettings": false,
-    "editor.definitionLinkOpensInPeek": true,
-    "gruvboxMaterial.darkPalette": "original",
-    "workbench.editorAssociations": {
-        "git-rebase-todo": "default"
+  "editor.tabSize": 2,
+  "editor.fontFamily": "PragmataPro Liga",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 15,
+  "debug.toolBarLocation": "docked",
+  "editor.minimap.enabled": false,
+  "explorer.confirmDragAndDrop": false,
+  "git.enableSmartCommit": true,
+  "git.confirmSync": false,
+  "git.autofetch": true,
+  "html.format.indentInnerHtml": true,
+  "editor.renderWhitespace": "boundary",
+  "editor.renderControlCharacters": true,
+  "explorer.confirmDelete": false,
+  "editor.acceptSuggestionOnEnter": "smart",
+  "debug.console.fontFamily": "PragmataPro Liga",
+  "scm.defaultViewMode": "tree",
+  "omnisharp.useEditorFormattingSettings": false,
+  "editor.definitionLinkOpensInPeek": true,
+  "gruvboxMaterial.darkPalette": "original",
+  "workbench.editorAssociations": {
+    "git-rebase-todo": "default"
+  },
+  "debug.allowBreakpointsEverywhere": true,
+  "editor.bracketPairColorization.enabled": true,
+  "csharp.semanticHighlighting.enabled": true,
+  "redhat.telemetry.enabled": false,
+  "gitmoji.outputType": "code",
+  "gitmoji.showEmojiCode": true,
+  "projectManager.any.maxDepthRecursion": 1,
+  "projectManager.git.baseFolders": [
+    "~/Developer"
+  ],
+  "projectManager.git.maxDepthRecursion": 1,
+  "projectManager.ignoreProjectsWithinProjects": true,
+  "githubPullRequests.fileListLayout": "tree",
+  "terminal.integrated.fontSize": 15,
+  "rust-analyzer.inlayHints.chainingHints.enable": false,
+  "rust-analyzer.inlayHints.parameterHints.enable": false,
+  "rust-analyzer.inlayHints.typeHints.enable": false,
+  "githubPullRequests.createOnPublishBranch": "never",
+  "editor.formatOnSave": true,
+  "window.commandCenter": true,
+  "githubPullRequests.pullBranch": "never",
+  "workbench.colorTheme": "Gruvbox Material Dark",
+  "workbench.list.smoothScrolling": true,
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.smoothScrolling": true,
+  "terminal.integrated.smoothScrolling": true,
+  "[markdown]": {
+    "editor.wordWrap": "off"
+  },
+  "git.mergeEditor": true,
+  "[yaml]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml",
+    "diffEditor.ignoreTrimWhitespace": true
+  },
+  "terminal.integrated.defaultProfile.windows": "nu",
+  "terminal.integrated.defaultProfile.osx": "nu",
+  "terminal.integrated.drawBoldTextInBrightColors": false,
+  "terminal.external.windowsExec": "wt.exe",
+  "terminal.integrated.profiles.osx": {
+    "nu": {
+      "path": "nu",
+      "icon": "chevron-right"
     },
-    "debug.allowBreakpointsEverywhere": true,
-    "editor.bracketPairColorization.enabled": true,
-    "csharp.semanticHighlighting.enabled": true,
-    "redhat.telemetry.enabled": false,
-    "gitmoji.outputType": "code",
-    "gitmoji.showEmojiCode": true,
-    "projectManager.any.maxDepthRecursion": 1,
-    "projectManager.git.baseFolders": [
-        "~/source"
-    ],
-    "projectManager.git.maxDepthRecursion": 1,
-    "projectManager.ignoreProjectsWithinProjects": true,
-    "githubPullRequests.fileListLayout": "tree",
-    "terminal.integrated.fontSize": 15,
-    "rust-analyzer.inlayHints.chainingHints.enable": false,
-    "rust-analyzer.inlayHints.parameterHints.enable": false,
-    "rust-analyzer.inlayHints.typeHints.enable": false,
-    "githubPullRequests.createOnPublishBranch": "never",
-    "editor.formatOnSave": true,
-    "window.commandCenter": true,
-    "githubPullRequests.pullBranch": "never",
-    "workbench.colorTheme": "Gruvbox Material Dark",
-    "workbench.list.smoothScrolling": true,
-    "editor.cursorSmoothCaretAnimation": "on",
-    "editor.smoothScrolling": true,
-    "terminal.integrated.smoothScrolling": true,
-    "[markdown]": {
-        "editor.wordWrap": "off"
+    "zsh": null,
+    "bash": null
+  },
+  "terminal.integrated.profiles.windows": {
+    "nu": {
+      "path": "nu",
+      "icon": "chevron-right"
     },
-    "git.mergeEditor": true,
-    "[yaml]": {
-        "editor.defaultFormatter": "redhat.vscode-yaml"
+    "PowerShell": {
+      "source": "PowerShell",
+      "icon": "terminal-powershell"
     },
-    "terminal.integrated.defaultProfile.windows": "nu",
-    "terminal.integrated.drawBoldTextInBrightColors": false,
-    "terminal.external.windowsExec": "wt.exe",
-    "terminal.integrated.profiles.windows": {
-        "nu": {
-            "path": "nu",
-            "icon": "chevron-right"
+    "Command Prompt": {
+      "path": [
+        "${env:windir}\\Sysnative\\cmd.exe",
+        "${env:windir}\\System32\\cmd.exe"
+      ],
+      "args": [],
+      "icon": "terminal-cmd"
+    }
+  },
+  "vspacecode.bindingOverrides": [
+    {
+      "keys": "\"",
+      "position": -1
+    },
+    {
+      "keys": "$",
+      "position": -1
+    },
+    {
+      "keys": "c",
+      "position": -1
+    },
+    {
+      "keys": "'",
+      "position": -1
+    },
+    {
+      "keys": "*",
+      "position": -1
+    },
+    {
+      "keys": "j.l",
+      "name": "Jump to line",
+      "type": "command",
+      "icon": "list-flat",
+      "command": "workbench.action.gotoLine"
+    },
+    {
+      "keys": "f.O",
+      "name": "Open folder",
+      "type": "command",
+      "icon": "folder-opened",
+      "command": "workbench.action.files.openFolder"
+    },
+    {
+      "keys": "f.i.i",
+      "type": "command",
+      "name": "Change indentation",
+      "icon": "pencil",
+      "command": "changeEditorIndentation1"
+    },
+    {
+      "keys": "p.p",
+      "name": "+Switch project",
+      "type": "command",
+      "icon": "project",
+      "command": "projectManager.listProjects"
+    },
+    {
+      "keys": "p.o",
+      "name": "+Open project in new window",
+      "type": "command",
+      "icon": "project",
+      "command": "projectManager.listProjectsNewWindow"
+    },
+    {
+      "keys": "p.l",
+      "position": -1
+    },
+    {
+      "keys": "p.r",
+      "name": "Refresh projects",
+      "type": "command",
+      "icon": "refresh",
+      "command": "projectManager.refreshProjects"
+    },
+    {
+      "keys": "p.l",
+      "name": "+Recent projects",
+      "type": "command",
+      "icon": "project",
+      "command": "workbench.action.openRecent"
+    },
+    {
+      "keys": "T.B",
+      "name": "Toggle secondary sidebar visibility",
+      "type": "command",
+      "icon": "split-horizontal",
+      "command": "workbench.action.toggleAuxiliaryBar"
+    },
+    {
+      "keys": "f.p",
+      "name": "Fuzzy finder",
+      "type": "command",
+      "icon": "search",
+      "command": "workbench.action.quickOpen"
+    },
+    {
+      "keys": "!",
+      "name": "Toggle Terminal",
+      "type": "command",
+      "icon": "terminal",
+      "command": "workbench.action.terminal.toggleTerminal",
+      "when": "terminalFocus"
+    },
+    {
+      "keys": "b.o",
+      "name": "Keep Open",
+      "type": "command",
+      "icon": "lock-small",
+      "command": "workbench.action.keepEditor"
+    },
+    {
+      "keys": "g.g",
+      "name": "Toggle git view",
+      "type": "command",
+      "icon": "source-control",
+      "command": "workbench.scm.focus"
+    },
+    {
+      "keys": "g.f",
+      "name": "+File",
+      "type": "bindings",
+      "icon": "file",
+      "bindings": [
+        {
+          "key": "d",
+          "name": "Diff",
+          "type": "command",
+          "icon": "compare-changes",
+          "command": "git.openChanges"
         },
-        "PowerShell": {
-            "source": "PowerShell",
-            "icon": "terminal-powershell"
+        {
+          "key": "l",
+          "name": "Show timeline",
+          "type": "command",
+          "icon": "history",
+          "command": "git.timeline.openDiff"
         },
-        "Command Prompt": {
-            "path": [
-                "${env:windir}\\Sysnative\\cmd.exe",
-                "${env:windir}\\System32\\cmd.exe"
-            ],
-            "args": [],
-            "icon": "terminal-cmd"
+      ]
+    },
+    {
+      "keys": "g.b",
+      "name": "+Branches",
+      "type": "command",
+      "icon": "git-branch",
+      "command": "git.checkout"
+    },
+    {
+      "keys": "g.c",
+      "name": "+Commits",
+      "type": "commands",
+      "icon": "git-commit",
+      "command": "git.commit"
+    },
+    {
+      "keys": "g.i",
+      "position": -1
+    },
+    {
+      "keys": "g.s",
+      "name": "+Sync",
+      "type": "bindings",
+      "icon": "repo-sync",
+      "bindings": [
+        {
+          "key": "p",
+          "name": "Push",
+          "type": "command",
+          "icon": "repo-push",
+          "command": "git.push"
+        },
+        {
+          "key": "u",
+          "name": "Pull",
+          "type": "command",
+          "icon": "repo-pull",
+          "command": "git.pull"
+        },
+        {
+          "key": "s",
+          "name": "Sync",
+          "type": "command",
+          "icon": "repo-sync",
+          "command": "git.sync"
+        },
+      ]
+    },
+    {
+      "keys": "g.S",
+      "position": -1
+    },
+    {
+      "keys": "g.U",
+      "position": -1
+    },
+    {
+      "keys": "g.m",
+      "position": -1
+    },
+    {
+      "keys": "T.C",
+      "name": "Toggle cursorless decorators",
+      "type": "command",
+      "icon": "debug-breakpoint",
+      "command": "cursorless.toggleDecorations"
+    },
+    {
+      "keys": "S.D",
+      "name": "Show demo time",
+      "type": "command",
+      "icon": "window",
+      "command": "demo-time.focus"
+    },
+    {
+      "keys": "h",
+      "position": -1
+    },
+    {
+      "keys": "l",
+      "position": -1
+    },
+    {
+      "keys": "r",
+      "position": -1
+    },
+    {
+      "keys": "B",
+      "name": "+Bookmarks",
+      "type": "bindings",
+      "icon": "bookmark",
+      "bindings": [
+        {
+          "key": "B",
+          "name": "Toggle",
+          "type": "command",
+          "icon": "bookmark",
+          "command": "bookmarks.toggle"
+        },
+        {
+          "key": "b",
+          "name": "Toggle Labled",
+          "type": "command",
+          "icon": "bookmark",
+          "command": "bookmarks.toggleLabeled"
+        },
+        {
+          "key": "l",
+          "name": "List",
+          "type": "command",
+          "icon": "list-flat",
+          "command": "bookmarks.list"
+        },
+        {
+          "key": "L",
+          "name": "List All",
+          "type": "command",
+          "icon": "list-tree",
+          "command": "bookmarks.listFromAllFiles"
+        },
+        {
+          "key": "n",
+          "name": "Next",
+          "type": "command",
+          "icon": "goto-next-location",
+          "command": "bookmarks.jumpToNext"
+        },
+        {
+          "key": "p",
+          "name": "Previous",
+          "type": "command",
+          "icon": "goto-previous-location",
+          "command": "bookmarks.jumpToPrevious"
+        },
+        {
+          "key": "c",
+          "name": "Clear",
+          "type": "command",
+          "icon": "notifications-clear",
+          "command": "bookmarks.clear"
+        },
+        {
+          "key": "C",
+          "name": "Clear All",
+          "type": "command",
+          "icon": "clear-all",
+          "command": "bookmarks.clearFromAllFiles"
         }
+      ]
     },
-    "window.menuBarVisibility": "compact",
-    "vspacecode.bindingOverrides": [
+    {
+      "keys": "\\",
+      "name": "+Copilot",
+      "type": "bindings",
+      "icon": "github",
+      "bindings": [
         {
-            "keys": "j.l",
-            "name": "Jump to line",
-            "type": "command",
-            "icon": "list-flat",
-            "command": "workbench.action.gotoLine"
+          "key": "\\",
+          "name": "Trigger inline",
+          "type": "command",
+          "icon": "lightbulb",
+          "command": "editor.action.inlineSuggest.trigger"
         },
         {
-            "keys": "f.O",
-            "name": "Open folder",
-            "type": "command",
-            "icon": "folder-opened",
-            "command": "workbench.action.files.openFolder"
+          "key": "c",
+          "name": "Trigger",
+          "type": "command",
+          "icon": "lightbulb-autofix",
+          "command": "github.copilot.interactiveEditor.generate"
         },
         {
-            "keys": "p.p",
-            "name": "+Switch project",
-            "type": "command",
-            "icon": "project",
-            "command": "projectManager.listProjects",
+          "key": "C",
+          "name": "Chat",
+          "type": "command",
+          "icon": "comment-discussion",
+          "command": "workbench.panel.chat.view.copilot.focus"
         },
         {
-            "keys": "p.l",
-            "position": -1,
+          "key": "q",
+          "name": "Question",
+          "type": "command",
+          "icon": "question",
+          "command": "chat.action.askQuickQuestion"
         },
         {
-            "keys": "p.r",
-            "name": "Refresh projects",
-            "type": "command",
-            "icon": "refresh",
-            "command": "projectManager.refreshProjects",
+          "key": "e",
+          "name": "Explain",
+          "type": "command",
+          "icon": "lightbulb",
+          "command": "github.copilot.interactiveEditor.explain"
         },
         {
-            "keys": "p.l",
-            "name": "+Recent projects",
-            "type": "command",
-            "icon": "project",
-            "command": "workbench.action.openRecent",
+          "key": "g",
+          "name": "Enable/Disable",
+          "type": "command",
+          "icon": "circle-large-outline",
+          "command": "github.copilot.toggleCopilot"
         },
         {
-            "keys": "T.B",
-            "name": "Toggle secondary sidebar visibility",
-            "type": "command",
-            "icon": "split-horizontal",
-            "command": "workbench.action.toggleAuxiliaryBar",
-        },
-        {
-            "keys": "f.p",
-            "name": "Fuzzy finder",
-            "type": "command",
-            "icon": "search",
-            "command": "workbench.action.quickOpen"
-        },
-        {
-            "keys": "!",
-            "name": "Close Terminal",
-            "type": "command",
-            "icon": "terminal",
-            "command": "workbench.action.terminal.toggleTerminal",
-            "when": "terminalFocus"
-        },
-        {
-            "keys": "b.o",
-            "name": "Keep Open",
-            "type": "command",
-            "icon": "lock-small",
-            "command": "workbench.action.keepEditor",
-        },
-        {
-            "keys": "g.b",
-            "name": "+Branches",
-            "type": "command",
-            "icon": "git-branch",
-            "command": "magit.branching"
-        },
-        {
-            "keys": "g.s",
-            "name": "+Sync",
-            "type": "bindings",
-            "icon": "git-branch",
-            "bindings": [
-                {
-                    "key": "p",
-                    "name": "Push",
-                    "type": "command",
-                    "icon": "repo-push",
-                    "command": "magit.pushing"
-                },
-                {
-                    "key": "u",
-                    "name": "Pull",
-                    "type": "command",
-                    "icon": "repo-pull",
-                    "command": "magit.pulling"
-                },
-            ]
-        },
-        {
-            "keys": "g.c",
-            "name": "+Commits",
-            "type": "commands",
-            "icon": "git-commit",
-            "command": "magit.commit"
-        },
-        {
-            "keys": "g.i",
-            "position": -1,
-        },
-        {
-            "keys": "g.S",
-            "name": "+Stashes",
-            "type": "command",
-            "icon": "list-flat",
-            "command": "magit.stashing"
-        },
-        {
-            "keys": "g.U",
-            "position": -1,
-        },
-        {
-            "keys": "g.m",
-            "position": -1,
-        },
-        {
-            "keys": "T.C",
-            "name": "Toggle cursorless decorators",
-            "type": "command",
-            "icon": "debug-breakpoint",
-            "command": "cursorless.toggleDecorations"
-        },
-        {
-            "keys": "B",
-            "name": "+Bookmarks",
-            "type": "bindings",
-            "icon": "bookmark",
-            "bindings": [
-                {
-                    "key": "B",
-                    "name": "Toggle",
-                    "type": "command",
-                    "icon": "bookmark",
-                    "command": "bookmarks.toggle"
-                },
-                {
-                    "key": "b",
-                    "name": "Toggle Labled",
-                    "type": "command",
-                    "icon": "bookmark",
-                    "command": "bookmarks.toggleLabeled"
-                },
-                {
-                    "key": "l",
-                    "name": "List",
-                    "type": "command",
-                    "icon": "list-flat",
-                    "command": "bookmarks.list"
-                },
-                {
-                    "key": "L",
-                    "name": "List All",
-                    "type": "command",
-                    "icon": "list-tree",
-                    "command": "bookmarks.listFromAllFiles"
-                },
-                {
-                    "key": "n",
-                    "name": "Next",
-                    "type": "command",
-                    "icon": "goto-next-location",
-                    "command": "bookmarks.jumpToNext"
-                },
-                {
-                    "key": "p",
-                    "name": "Previous",
-                    "type": "command",
-                    "icon": "goto-previous-location",
-                    "command": "bookmarks.jumpToPrevious"
-                },
-                {
-                    "key": "c",
-                    "name": "Clear",
-                    "type": "command",
-                    "icon": "notifications-clear",
-                    "command": "bookmarks.clear"
-                },
-                {
-                    "key": "C",
-                    "name": "Clear All",
-                    "type": "command",
-                    "icon": "clear-all",
-                    "command": "bookmarks.clearFromAllFiles"
-                },
-            ]
-        },
-        {
-            "keys": "\\",
-            "name": "+Copilot",
-            "type": "bindings",
-            "icon": "github",
-            "bindings": [
-                {
-                    "key": "\\",
-                    "name": "Trigger nline",
-                    "type": "command",
-                    "icon": "lightbulb",
-                    "command": "editor.action.inlineSuggest.trigger"
-                },
-                {
-                    "key": "c",
-                    "name": "Trigger",
-                    "type": "command",
-                    "icon": "lightbulb-autofix",
-                    "command": "github.copilot.interactiveEditor.generate"
-                },
-                {
-                    "key": "C",
-                    "name": "Chat",
-                    "type": "command",
-                    "icon": "comment-discussion",
-                    "command": "workbench.panel.chat.view.copilot.focus"
-                },
-                {
-                    "key": "q",
-                    "name": "Question",
-                    "type": "command",
-                    "icon": "question",
-                    "command": "chat.action.askQuickQuestion",
-                },
-                {
-                    "key": "e",
-                    "name": "Explain",
-                    "type": "command",
-                    "icon": "lightbulb",
-                    "command": "github.copilot.interactiveEditor.explain"
-                },
-                {
-                    "key": "g",
-                    "name": "Enable/Disable",
-                    "type": "command",
-                    "icon": "circle-large-outline",
-                    "command": "github.copilot.toggleCopilot",
-                },
-                {
-                    "key": "x",
-                    "name": "Clear Chat",
-                    "type": "command",
-                    "icon": "clear-all",
-                    "command": "workbench.action.chat.copilot.clear"
-                }
-            ]
+          "key": "x",
+          "name": "Clear Chat",
+          "type": "command",
+          "icon": "clear-all",
+          "command": "workbench.action.chat.copilot.clear"
         }
-    ],
-    "whichkey.sortOrder": "nonNumberFirst",
-    "editor.accessibilitySupport": "off",
-    "rust-analyzer.check.command": "clippy",
-    "javascript.updateImportsOnFileMove.enabled": "never",
-    "[python]": {
-        "editor.formatOnType": true
+      ]
+    }
+  ],
+  "whichkey.sortOrder": "nonNumberFirst",
+  "editor.accessibilitySupport": "off",
+  "rust-analyzer.check.command": "clippy",
+  "javascript.updateImportsOnFileMove.enabled": "never",
+  "[python]": {
+    "editor.formatOnType": true
+  },
+  "terminal.integrated.automationProfile.windows": {
+    "path": "cmd",
+    "args": []
+  },
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": true,
+    "scminput": false
+  },
+  "editor.inlineSuggest.showToolbar": "always",
+  "editor.inlineSuggest.enabled": false,
+  "git.openRepositoryInParentFolders": "never",
+  "diffEditor.ignoreTrimWhitespace": false,
+  "gruvboxMaterial.lightPalette": "original",
+  "gruvboxMaterial.darkWorkbench": "high-contrast",
+  "vs-kubernetes": {
+    "vs-kubernetes.crd-code-completion": "disabled"
+  },
+  "yaml.schemaStore.enable": false,
+  "workbench.startupEditor": "none",
+  "extensions.experimental.affinity": {
+    "asvetliakov.vscode-neovim": 1
+  },
+  "cursorless.showOnStart": false,
+  "git.blame.editorDecoration.enabled": true,
+  "editor.lineNumbers": "on",
+  "extensions.ignoreRecommendations": true,
+  "mssql.connections": [
+    {
+      "server": "fiskaltrust-de.crm4.dynamics.com",
+      "database": "",
+      "authenticationType": "AzureMFA",
+      "user": "Paul Volavsek - paul.volavsek@fiskaltrust.services",
+      "email": "paul.volavsek@fiskaltrust.services",
+      "accountId": "7dc104a7-0b1c-4685-9997-804f45eb7471.c5d004c4-fbb8-4d7d-ad1f-b317497ea59c",
+      "profileName": "crm-de",
+      "azureAccountToken": "",
+      "expiresOn": 1740490592,
+      "password": "",
+      "connectTimeout": 15,
+      "commandTimeout": 30,
+      "applicationName": "vscode-mssql",
+      "id": "45950186-B567-47B1-8130-ECBB6DE67466",
+      "profileSource": 0,
+      "groupId": "BA401100-A0FE-49F4-A3D8-E47623494C18"
     },
-    "terminal.integrated.automationProfile.windows": {
-        "path": "cmd",
-        "args": []
-    },
-    "github.copilot.enable": {
-        "*": true,
-        "plaintext": false,
-        "markdown": true,
-        "scminput": false
-    },
-    "editor.inlineSuggest.showToolbar": "always",
-    "editor.inlineSuggest.enabled": true,
-    "git.openRepositoryInParentFolders": "never",
-    "diffEditor.ignoreTrimWhitespace": true,
-    "gruvboxMaterial.lightPalette": "original",
-    "github.copilot.editor.enableAutoCompletions": false,
-    "gruvboxMaterial.darkWorkbench": "high-contrast",
-    "vs-kubernetes": {
-        "vs-kubernetes.crd-code-completion": "disabled"
-    },
-    "yaml.schemaStore.enable": false,
-    "workbench.startupEditor": "none",
-    "extensions.experimental.affinity": {
-        "asvetliakov.vscode-neovim": 1
-    },
-    "cursorless.showOnStart": false,
-    "todo-tree.general.tags": [
-        "BUG",
-        "HACK",
-        "FIXME",
-        "TODO",
-        "[ ]",
-        "[x]",
-        "PROBLEM",
-        "QUESTION"
-    ],
-    "csharp.debug.justMyCode": false,
+    {
+      "authenticationType": "SqlLogin",
+      "connectTimeout": 30,
+      "applicationName": "vscode-mssql",
+      "profileName": "common-sandbox",
+      "server": "fiskaltrust.database.windows.net",
+      "user": "fiskaltrust",
+      "password": "",
+      "savePassword": true,
+      "groupId": "BA401100-A0FE-49F4-A3D8-E47623494C18",
+      "id": "64287B1C-0123-4D62-94D2-A01D87672168",
+      "profileSource": 0
+    }
+  ],
+  "mssql.enableRichExperiences": true,
+  "github.copilot.chat.codesearch.enabled": true,
+  "maui.configuration.javaSdkPreferredPath": "/Library/Java/JavaVirtualMachines/microsoft-21.jdk/Contents/Home",
+  "maui.configuration.androidSdkPreferredPath": "/opt/homebrew/share/android-commandlinetools",
+  "debug.onTaskErrors": "showErrors",
+  "git.replaceTagsWhenPull": true,
+  "mssql.connectionGroups": [
+    {
+      "name": "ROOT",
+      "id": "BA401100-A0FE-49F4-A3D8-E47623494C18"
+    }
+  ],
+  "dotnet.backgroundAnalysis.analyzerDiagnosticsScope": "fullSolution",
+  "dotnet.backgroundAnalysis.compilerDiagnosticsScope": "fullSolution",
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "diffEditor.renderSideBySide": false,
+  "files.associations": {
+    "*.tidal": "haskell"
+  },
+  "tidalcycles.ghciPath": "~/.ghcup/bin/ghci",
+  "envil.environment.active": false
 }

@@ -1,3 +1,4 @@
 darwin:
   links:
     wezterm.lua: ~/.config/wezterm/wezterm.lua
+  installs: brew install wezterm

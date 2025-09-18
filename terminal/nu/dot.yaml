@@ -2,12 +2,14 @@ windows:
   links:
     config.nu: ~/AppData/Roaming/nushell/config.nu
     env.nu: ~/AppData/Roaming/nushell/env.nu
+  installs:
+    cmd: cargo install nu
+    depends: [../dev/rust]
 
 darwin:
   links:
     config.nu: ~/Library/Application Support/nushell/config.nu
     env.nu: ~/Library/Application Support/nushell/env.nu
-global:
   installs:
-    cmd: cargo install nu
-    depends: [../dev/rust]
+    cmd: brew install nushell
+    depends: [../tools/homebrew]

@@ -15,22 +15,6 @@
 		"prefix": "method-closure",
 		"body": ".$1(|$2| $3)"
 	},
-	"pipe": {
-		"prefix": "pipe",
-		"body": ".pipe($1)"
-	},
-	"pipe Ok": {
-		"prefix": "pipe-ok",
-		"body": ".pipe(Ok)"
-	},
-	"pipe Some": {
-		"prefix": "pipe-some",
-		"body": ".pipe(Some)"
-	},
-	"pipe Error": {
-		"prefix": "pipe-err",
-		"body": ".pipe(Err)"
-	},
 	"into Ok": {
 		"prefix": ".ok",
 		"body": ".into_ok()"
@@ -39,12 +23,18 @@
 		"prefix": ".some",
 		"body": ".into_some()"
 	},
-	"Debug Print": {
-		"prefix": "debug",
-		"body": "println!(\"{:?}\", $1);"
+	"dbg": {
+		"prefix": "dbg",
+		"description": "",
+		"scope": "",
+		"body": [
+			"dbg!($1);"
+		]
 	},
 	"inspect Print": {
 		"prefix": "inspect",
-		"body": ".inspect(|d| println!(\"{:?}\", d))"
+		"body": [
+			".inspect(|d| { dbg!(d); })"
+		]
 	},
 }
